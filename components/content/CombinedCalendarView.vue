@@ -1,5 +1,4 @@
 <template>
-  <dev>
     <object
       data="https://calendar.google.com/calendar/embed?height=600
 &wkst=1
@@ -15,7 +14,7 @@
 &src=aW50ZXJuc0BpZXNqYWthcnRhLm9yZw
 &src=dGVlbnNAaWVzamFrYXJ0YS5vcmc
 &color=%237CB342
-&color=%23D81B60
+&color=%23D81B60S
 &color=%23F6BF26
 &color=%23B39DDB
 &color=%234285F4"
@@ -25,5 +24,4 @@
       frameborder="0"
       scrolling="no"
     ></object>
-  </dev>
 </template>

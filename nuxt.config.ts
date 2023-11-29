@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  ssr: true,
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: "IES Jakarta Quick Links",
@@ -82,4 +83,5 @@ export default defineNuxtConfig({
 
   css: ["~/assets/css/Global.css"],
   modules: ["@nuxt/content"],
+  
 });
