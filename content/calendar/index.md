@@ -3,8 +3,7 @@ title: 'IES Combined Calendar'
 head: 'usecontentHead'
 ---
 ::TheHeader
-::
-
+::			
 
 ::CombinedCalendarView
 ::

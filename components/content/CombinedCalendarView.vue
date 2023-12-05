@@ -1,26 +1,3 @@
 <template>
-	<object data="https://calendar.google.com/calendar/embed?height=600
-	&wkst=1
-	&bgcolor=%23ffffff
-	&ctz=Asia%2FJakarta
-	&src=Y19jMzZiY2UwMDRjMThhZjA3NWZmN2NjMGNmOTk0MjljNjFjNjQ5ZmYyYjhiYzVmM2YzY2QzYTA0MmY5ZjExY2QxQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20
-	&src=Y19kNzUyZWJhNDIyZGIzYzNhZjM0OGNjMTRkM2RkNzhiOTM2MjAwOWQ4NjYwMmQwODZkMmVkMjk4YWUwNDRkNjA0QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20
-	&src=aWVzamFrYXJ0YS5vcmdfYzRnc2xmbWRxZmM2aGhrZjk2dHNjMXU1Y2dAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ
-	&src=Y182YmZmYWQ5ZTNjNTFiMjkwZWFlYTEzMzI3M2I1NTUzMDM0OTg5NzNlOGY1NjdiNjQ2NDBkNGRlNDFmMGZhNDBhQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20
-	&src=Y19kYWQ4ZmM2ZWEzYWRhYTcyODI3ZDA4ZDFkZDJkYjkwZjQ3MjQzMjAzNmU3MzFkZjY1MjNkYTNiNGY2YzEwODg5QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20
-	&src=c29waGllQGllc2pha2FydGEub3Jn
-	&src=dGVlbnNAaWVzamFrYXJ0YS5vcmc
-	&color=%23E4C441
-	&color=%23F4511E
-	&color=%23D81B60
-	&color=%23C0CA33
-	&color=%238E24AA
-	&color=%230B8043
-	&color=%234285F4" 
-	style="border-width:0" 
-	width="800" 
-	height="600" 
-	frameborder="0" 
-	scrolling="no">
-	</object>
+	<object data="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FJakarta&title=IES%20Jakarta%20Combined%20Calendar&src=Y19jMzZiY2UwMDRjMThhZjA3NWZmN2NjMGNmOTk0MjljNjFjNjQ5ZmYyYjhiYzVmM2YzY2QzYTA0MmY5ZjExY2QxQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=Y19kNzUyZWJhNDIyZGIzYzNhZjM0OGNjMTRkM2RkNzhiOTM2MjAwOWQ4NjYwMmQwODZkMmVkMjk4YWUwNDRkNjA0QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=aWVzamFrYXJ0YS5vcmdfYzRnc2xmbWRxZmM2aGhrZjk2dHNjMXU1Y2dAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=Y182YmZmYWQ5ZTNjNTFiMjkwZWFlYTEzMzI3M2I1NTUzMDM0OTg5NzNlOGY1NjdiNjQ2NDBkNGRlNDFmMGZhNDBhQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=Y18xZjdiNTViYjlkZTg5NmYxOGE1NmU2ZmFhMzc4YmVkNGE2MTIxNzFjNjcxNmEyZmQwMGVjYjc1MTJkZTdhOWQ2QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=Y19kYWQ4ZmM2ZWEzYWRhYTcyODI3ZDA4ZDFkZDJkYjkwZjQ3MjQzMjAzNmU3MzFkZjY1MjNkYTNiNGY2YzEwODg5QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=c29waGllQGllc2pha2FydGEub3Jn&src=dGVlbnNAaWVzamFrYXJ0YS5vcmc&src=Y18wOWEzODVkNThlOTY3MjA0Y2NjNWE4MjZkMWJlMTZkNzg0ZWU1NGUyMjdiMmUxNzkzNzM1NGJjMzZhMDBhZDgwQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23F1C232&color=%236AA84F&color=%23CC0000&color=%23B6D7A8&color=%238E7CC3&color=%23351C75&color=%2338761D&color=%233D85C6&color=%231C4587" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></object>
 </template>
