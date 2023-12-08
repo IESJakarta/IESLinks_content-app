@@ -1,9 +1,6 @@
 <template>
   <div class="topgrid">
     <div>
-      <p><br /><br /></p>
-    </div>
-    <div>
       <p>
         Need to connect with us in more conventional ways?<br />
         IES Jakarta - The City Center Batavia Tower 1<br />
