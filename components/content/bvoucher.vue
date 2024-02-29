@@ -629,7 +629,7 @@
       font-size: 90%;
       background: rgba(0,0,0,0);
       line-height: 130.5%;
-      resize: none
+      resize: none;
       border-box: none;
       border-color: transparent;
       }
