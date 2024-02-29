@@ -619,9 +619,6 @@
 </div>
 </template>
 <style>
-   body {
-   background-color: white;
-   }
    input,
    select,
    textarea {
