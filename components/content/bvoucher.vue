@@ -1,6 +1,6 @@
 <template>
    <div>
-<svg
+      <svg
    version="1.1"
    id="svg1"
    width="793.7027"
@@ -270,7 +270,7 @@
      id="g1"
      inkscape:groupmode="layer"
      inkscape:label="1">
-   <g
+    <g
        id="group-MC0">
       <path
          id="path2"
@@ -567,7 +567,8 @@
          style="fill:none;stroke:#231f20;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
          transform="matrix(1.3333333,0,0,-1.3333333,0,529.136)"
          clip-path="url(#clipPath68)" />
-    </g> 
+    </g>
+   
       <foreignObject id="DateSubmitBox" x="622" y="85" width="133" height="34">
         <body xmlns="http://www.w3.org/1999/xhtml">
             <form>
@@ -577,6 +578,7 @@
         <title
          id="title9">DateSubmitBox</title>
     </foreignObject>
+ 
       <foreignObject id="PayTo" x="102.3" y="114.5" width="100%" height="36">
         <body xmlns="http://www.w3.org/1999/xhtml">
             <form>
@@ -586,6 +588,7 @@
         <title
          id="title10">PayTo</title>
     </foreignObject>
+
       <foreignObject id="CurBox" x="551" y="140.8" width="36" height="50">
          <body xmlns="http://www.w3.org/1999/xhtml">
             <form>
@@ -595,6 +598,7 @@
          </body>
          <title id="title11">Currency Selector</title>
       </foreignObject>
+
       <foreignObject id="AmountBox" x="593" y="148" width="200" height="34">
         <body xmlns="http://www.w3.org/1999/xhtml">
             <form>
@@ -604,6 +608,7 @@
         <title
          id="title12">AmountBox</title>
     </foreignObject>
+
       <foreignObject id="SayBox" x="83.1" y="148" width="437" height="35">
         <body xmlns="http://www.w3.org/1999/xhtml">
             <form>
@@ -613,6 +618,8 @@
         <title
          id="title13">SayBox</title>
     </foreignObject>
+
+
     <foreignObject id="BeingBox" x="105" y="180" width="640" height="112">
         <body xmlns="http://www.w3.org/1999/xhtml" >
         <form>
@@ -622,6 +629,9 @@
          <title
          id="title14">BeingBox</title>
     </foreignObject>
+
+
+
       <foreignObject id="ReqDateBox" x="454" y="366" width="141" height="36">
         <body xmlns="http://www.w3.org/1999/xhtml">
             <form>
@@ -631,6 +641,9 @@
         <title
          id="title15">ReqDateBox</title>
     </foreignObject>
+
+
+
   </g>
 </svg>
 </div>
