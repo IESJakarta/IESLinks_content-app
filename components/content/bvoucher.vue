@@ -647,6 +647,7 @@
 </template>
 <style>
 body {
+   font-family: Arial, san-serif; 
   background-color: white;
 }
 </style>
