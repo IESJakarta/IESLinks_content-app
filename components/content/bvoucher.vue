@@ -1,6 +1,9 @@
 <template>
    <div>
-      <svg
+      <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
    version="1.1"
    id="svg1"
    width="793.7027"
@@ -12,6 +15,23 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
+   <style>
+      input,
+      select,
+      textarea {
+         font-family: Arial;
+         font-size: 90%;
+         background: rgba(0,0,0,0);
+         line-height: 130.5%;
+         resize: none
+         border-box: none;
+         border-color: transparent;
+         }
+      input.number {
+         width: 1em;
+         }
+
+   </style>
   <defs
      id="defs1">
     <clipPath
@@ -551,86 +571,89 @@
          transform="matrix(1.3333333,0,0,-1.3333333,0,529.136)"
          clip-path="url(#clipPath68)" />
     </g>
+   
       <foreignObject id="DateSubmitBox" x="622" y="85" width="133" height="34">
-        <body xmlns="http://www.w3.org/1999/xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
             <form>
                 <input type="date" size="80" />
             </form>
-        </body>      
+        </div>      
         <title
          id="title9">DateSubmitBox</title>
     </foreignObject>
+ 
       <foreignObject id="PayTo" x="102.3" y="114.5" width="100%" height="36">
-        <body xmlns="http://www.w3.org/1999/xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
             <form>
                 <input type="text" size="80" />
             </form>
-        </body>      
+        </div>      
         <title
          id="title10">PayTo</title>
     </foreignObject>
+
       <foreignObject id="CurBox" x="551" y="140.8" width="36" height="50">
-         <body xmlns="http://www.w3.org/1999/xhtml">
+         <div xmlns="http://www.w3.org/1999/xhtml">
             <form>
                <input type="radio" id="IDR" name="currency" value="IDR" />
                <input type="radio" id="USD" name="currency" value="USD" />
             </form>
-         </body>
+         </div>
          <title id="title11">Currency Selector</title>
       </foreignObject>
+
       <foreignObject id="AmountBox" x="593" y="148" width="200" height="34">
-        <body xmlns="http://www.w3.org/1999/xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
             <form>
                 <input type="text" step="0.01" size="14" style="text-align: right"/>
             </form>
-        </body>      
+        </div>      
         <title
          id="title12">AmountBox</title>
     </foreignObject>
+
       <foreignObject id="SayBox" x="83.1" y="148" width="437" height="35">
-        <body xmlns="http://www.w3.org/1999/xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
             <form>
                 <input type="text" size="53" />
             </form>
-        </body>      
+        </div>      
         <title
          id="title13">SayBox</title>
     </foreignObject>
+
+
     <foreignObject id="BeingBox" x="105" y="180" width="640" height="112">
-        <body xmlns="http://www.w3.org/1999/xhtml" >
+        <div xmlns="http://www.w3.org/1999/xhtml" >
         <form>
          <textarea id="BeingBox" name="BeingBox" rows="5" cols="83" wrap="soft" placeholder="Please input your transation details here." />
          </form>
-         </body>
+         </div>
          <title
          id="title14">BeingBox</title>
     </foreignObject>
+
+
+
       <foreignObject id="ReqDateBox" x="454" y="366" width="141" height="36">
-        <body xmlns="http://www.w3.org/1999/xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
             <form>
                 <input type="date" size="80" />
             </form>
-        </body>      
+        </div>      
         <title
          id="title15">ReqDateBox</title>
     </foreignObject>
+
+
+
   </g>
 </svg>
-</div>
+
+   </div>
 </template>
 <style>
-   input,
-   select,
-   textarea {
-      font-family: Arial;
-      font-size: 90%;
-      background: rgba(0,0,0,0);
-      line-height: 130.5%;
-      resize: none;
-      border-box: none;
-      border-color: transparent;
-      }
-   input.number {
-      width: 1em;
-      }
+   body {
+   background-color: white;
+   }
 </style>
