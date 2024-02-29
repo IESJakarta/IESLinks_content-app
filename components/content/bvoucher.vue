@@ -1,4 +1,5 @@
 <template>
+   <div>
 <svg
    version="1.1"
    id="svg1"
@@ -632,5 +633,5 @@
     </foreignObject>
   </g>
 </svg>
-
+</div>
 </template>
