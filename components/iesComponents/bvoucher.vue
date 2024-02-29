@@ -270,6 +270,16 @@
      id="g1"
      inkscape:groupmode="layer"
      inkscape:label="1">
+
+     <rect
+       style="fill:#ffffff;fill-opacity:1;stroke-width:7.5716;stroke-linecap:round;stroke-linejoin:round"
+       id="rect1"
+       width="718.78101"
+       height="491.71399"
+       x="37.460846"
+       y="18.710997" />
+
+
     <g
        id="group-MC0">
       <path
