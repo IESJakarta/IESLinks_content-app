@@ -1,2 +1,1 @@
-# Bank Voucher Page
 :bvoucher
