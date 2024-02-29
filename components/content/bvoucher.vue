@@ -249,6 +249,22 @@
        margin="0"
        bleed="0" />
   </sodipodi:namedview>
+  <style>
+   input,
+   select,
+   textarea {
+      font-family: Arial;
+      font-size: 90%;
+      background: rgba(0,0,0,0);
+      line-height: 130.5%;
+      resize: none;
+      border-box: none;
+      border-color: transparent;
+      }
+   input.number {
+      width: 1em;
+      }
+  </style>
   <g
      id="g1"
      inkscape:groupmode="layer"
@@ -622,18 +638,4 @@
    body {
    background-color: white;
    }
-   input,
-   select,
-   textarea {
-      font-family: Arial;
-      font-size: 90%;
-      background: rgba(0,0,0,0);
-      line-height: 130.5%;
-      resize: none;
-      border-box: none;
-      border-color: transparent;
-      }
-   input.number {
-      width: 1em;
-      }
 </style>
