@@ -12,6 +12,22 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
+   <style>
+   input,
+   select,
+   textarea {
+      font-family: Arial;
+      font-size: 90%;
+      background: rgba(0,0,0,0);
+      line-height: 130.5%;
+      resize: none;
+      border-box: none;
+      border-color: transparent;
+      }
+   input.number {
+      width: 1em;
+      }
+  </style>
   <defs
      id="defs1">
     <clipPath
@@ -249,22 +265,6 @@
        margin="0"
        bleed="0" />
   </sodipodi:namedview>
-  <style>
-   input,
-   select,
-   textarea {
-      font-family: Arial;
-      font-size: 90%;
-      background: rgba(0,0,0,0);
-      line-height: 130.5%;
-      resize: none;
-      border-box: none;
-      border-color: transparent;
-      }
-   input.number {
-      width: 1em;
-      }
-  </style>
   <g
      id="g1"
      inkscape:groupmode="layer"
