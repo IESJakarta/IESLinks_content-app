@@ -13,6 +13,10 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
    <style>
+      body {
+         font-family: Arial; 
+         background-color: white;
+         }
       input,
       select,
       textarea {
@@ -648,9 +652,3 @@
 </svg>
 </div>
 </template>
-<style>
-body {
-   font-family: Arial, san-serif; 
-  background-color: white;
-}
-</style>
