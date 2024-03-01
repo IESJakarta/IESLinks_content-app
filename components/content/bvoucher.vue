@@ -649,7 +649,7 @@
    </div>
 </template>
 <style scoped>
-div {
+.div {
    background-color = "white";
 }
 </style>
