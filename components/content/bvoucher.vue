@@ -648,10 +648,11 @@
       background: rgba(255, 255, 255);
       line-height: 130.5%;
       resize: none;
-      border-box: none;
-      border-color: white;
+      border: none;
+      outline: none;
+      border-color: transparent;
       }
       input[type=number] {
-      width: 64px;
+      width: .120px;
       }
 </style>
