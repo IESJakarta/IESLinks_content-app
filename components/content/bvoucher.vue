@@ -655,4 +655,14 @@
       input[type=number] {
       width: .120px;
       }
+      input[type=radio] {
+      font-family: Arial;
+      font-size: 90%;
+      background: rgba(255, 255, 255);
+      line-height: 130.5%;
+      resize: none;
+      border: none;
+      outline: none;
+      border-color: transparent;
+      }
 </style>
