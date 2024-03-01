@@ -649,7 +649,7 @@
    </div>
 </template>
 <style>
-  .div {
+  div {
       background-color = white;
    }
 </style>
