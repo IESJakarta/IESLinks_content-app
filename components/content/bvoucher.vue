@@ -648,8 +648,8 @@
 </svg>
    </div>
 </template>
-<style scoped>
-  >>> .div {
+<style>
+  .div {
       background-color = white;
    }
 </style>
