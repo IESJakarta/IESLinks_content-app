@@ -12,23 +12,7 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
-   <style id="style1">
-      input,
-      select,
-      textarea {
-         font-family: Arial;
-         font-size: 90%;
-         background: rgba(0,0,0,0);
-         line-height: 130.5%;
-         resize: none
-         border-box: none;
-         border-color: transparent;
-         }
-      input.number {
-         width: 1em;
-         }
 
-   </style>
   <defs
      id="defs1">
     <clipPath
@@ -651,5 +635,22 @@
 <style>
   div {
       background-color = white;
+   }
+</style>
+<style id="style1">
+input,
+select,
+textarea {
+   font-family: Arial;
+   font-size: 90%;
+   background: rgba(0,0,0,0);
+   line-height: 130.5%;
+   resize: none
+   border-box: none;
+   border-color: transparent;
+   }
+
+input.number {
+   width: 1em;
    }
 </style>
