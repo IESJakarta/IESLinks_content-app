@@ -6,15 +6,29 @@
    width="793.7027"
    height="529.13599"
    viewBox="0 0 793.7027 529.13599"
-   sodipodi:docname="20240229_WBack_MModforeignobjectsprep_LandscapeOriginalSize_FA Rev. Bank Voucher.svg"
+   sodipodi:docname="20240229_MModforeignobjectsprep_LandscapeOriginalSize_FA Rev. Bank Voucher.svg"
    inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <style
-     id="style1">&#10;      input,&#10;      select,&#10;      textarea {&#10;         font-family: Arial;&#10;         font-size: 90%;&#10;         background: rgba(0,0,0,0);&#10;         line-height: 130.5%;&#10;         resize: none&#10;         border-box: none;&#10;         border-color: transparent;&#10;         }&#10;      input.number {&#10;         width: 1em;&#10;         }&#10;&#10;   </style>
+   xmlns:svg="http://www.w3.org/2000/svg">
+   <style>
+      input,
+      select,
+      textarea {
+         font-family: Arial;
+         font-size: 90%;
+         background: rgba(0,0,0,0);
+         line-height: 130.5%;
+         resize: none
+         border-box: none;
+         border-color: transparent;
+         }
+      input.number {
+         width: 1em;
+         }
+
+   </style>
   <defs
      id="defs1">
     <clipPath
@@ -256,13 +270,6 @@
      id="g1"
      inkscape:groupmode="layer"
      inkscape:label="1">
-    <rect
-       style="fill:#ffffff;fill-opacity:1;stroke-width:7.5716;stroke-linecap:round;stroke-linejoin:round"
-       id="rect1"
-       width="718.78101"
-       height="491.71399"
-       x="37.460846"
-       y="18.710997" />
     <g
        id="group-MC0">
       <path
@@ -561,133 +568,83 @@
          transform="matrix(1.3333333,0,0,-1.3333333,0,529.136)"
          clip-path="url(#clipPath68)" />
     </g>
-    <foreignObject
-       id="DateSubmitBox"
-       x="622"
-       y="85"
-       width="133"
-       height="34">
-      <xhtml:body>
-        <xhtml:form>
-          <xhtml:input
-             type="date"
-             size="80" />
-        </xhtml:form>
-      </xhtml:body>
-      <title
+   
+      <foreignObject id="DateSubmitBox" x="622" y="85" width="133" height="34">
+        <body xmlns="http://www.w3.org/1999/xhtml">
+            <form>
+                <input type="date" size="80" />
+            </form>
+        </body>      
+        <title
          id="title9">DateSubmitBox</title>
     </foreignObject>
-    <foreignObject
-       id="PayTo"
-       x="102.3"
-       y="114.5"
-       width="100%"
-       height="36">
-      <xhtml:body>
-        <xhtml:form>
-          <xhtml:input
-             type="text"
-             size="80" />
-        </xhtml:form>
-      </xhtml:body>
-      <title
+ 
+      <foreignObject id="PayTo" x="102.3" y="114.5" width="100%" height="36">
+        <body xmlns="http://www.w3.org/1999/xhtml">
+            <form>
+                <input type="text" size="80" />
+            </form>
+        </body>      
+        <title
          id="title10">PayTo</title>
     </foreignObject>
-    <foreignObject
-       id="CurBox"
-       x="551"
-       y="140.8"
-       width="36"
-       height="50">
-      <xhtml:body>
-        <xhtml:form>
-          <xhtml:input
-             type="radio"
-             id="IDR"
-             name="currency"
-             value="IDR" />
-          <xhtml:input
-             type="radio"
-             id="USD"
-             name="currency"
-             value="USD" />
-        </xhtml:form>
-      </xhtml:body>
-      <title
-         id="title11">Currency Selector</title>
-    </foreignObject>
-    <foreignObject
-       id="AmountBox"
-       x="593"
-       y="148"
-       width="200"
-       height="34">
-      <xhtml:body>
-        <xhtml:form>
-          <xhtml:input
-             type="text"
-             step="0.01"
-             size="14"
-             style="text-align: right" />
-        </xhtml:form>
-      </xhtml:body>
-      <title
+
+      <foreignObject id="CurBox" x="551" y="140.8" width="36" height="50">
+         <body xmlns="http://www.w3.org/1999/xhtml">
+            <form>
+               <input type="radio" id="IDR" name="currency" value="IDR" />
+               <input type="radio" id="USD" name="currency" value="USD" />
+            </form>
+         </body>
+         <title id="title11">Currency Selector</title>
+      </foreignObject>
+
+      <foreignObject id="AmountBox" x="593" y="148" width="200" height="34">
+        <body xmlns="http://www.w3.org/1999/xhtml">
+            <form>
+                <input type="text" step="0.01" size="14" style="text-align: right"/>
+            </form>
+        </body>      
+        <title
          id="title12">AmountBox</title>
     </foreignObject>
-    <foreignObject
-       id="SayBox"
-       x="83.1"
-       y="148"
-       width="437"
-       height="35">
-      <xhtml:body>
-        <xhtml:form>
-          <xhtml:input
-             type="text"
-             size="53" />
-        </xhtml:form>
-      </xhtml:body>
-      <title
+
+      <foreignObject id="SayBox" x="83.1" y="148" width="437" height="35">
+        <body xmlns="http://www.w3.org/1999/xhtml">
+            <form>
+                <input type="text" size="53" />
+            </form>
+        </body>      
+        <title
          id="title13">SayBox</title>
     </foreignObject>
-    <foreignObject
-       id="BeingBox"
-       x="105"
-       y="180"
-       width="640"
-       height="112">
-      <xhtml:body>
-        <xhtml:form>
-          <xhtml:textarea
-             id="BeingBox"
-             name="BeingBox"
-             rows="5"
-             cols="83"
-             wrap="soft"
-             placeholder="Please input your transation details here." />
-        </xhtml:form>
-      </xhtml:body>
-      <title
+
+
+    <foreignObject id="BeingBox" x="105" y="180" width="640" height="112">
+        <body xmlns="http://www.w3.org/1999/xhtml" >
+        <form>
+         <textarea id="BeingBox" name="BeingBox" rows="5" cols="83" wrap="soft" placeholder="Please input your transation details here." />
+         </form>
+         </body>
+         <title
          id="title14">BeingBox</title>
     </foreignObject>
-    <foreignObject
-       id="ReqDateBox"
-       x="454"
-       y="366"
-       width="141"
-       height="36">
-      <xhtml:body>
-        <xhtml:form>
-          <xhtml:input
-             type="date"
-             size="80" />
-        </xhtml:form>
-      </xhtml:body>
-      <title
+
+
+
+      <foreignObject id="ReqDateBox" x="454" y="366" width="141" height="36">
+        <body xmlns="http://www.w3.org/1999/xhtml">
+            <form>
+                <input type="date" size="80" />
+            </form>
+        </body>      
+        <title
          id="title15">ReqDateBox</title>
     </foreignObject>
+
+
+
   </g>
 </svg>
-
    </div>
 </template>
