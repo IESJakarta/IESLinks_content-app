@@ -646,7 +646,7 @@
       border-box: none;
       border-color: transparent;
       }
-   input.number {
+      input[type=number] {
       width: 1em;
       }
 </style>
