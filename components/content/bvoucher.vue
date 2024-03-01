@@ -12,7 +12,7 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
-   <style>
+   <style id="style1">
       input,
       select,
       textarea {
@@ -648,3 +648,8 @@
 </svg>
    </div>
 </template>
+<style scoped>
+div{
+   background-color = "white"
+}
+</style>
