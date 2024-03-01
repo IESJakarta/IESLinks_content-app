@@ -637,7 +637,7 @@
       background-color = white;
    }
 </style>
-<style id="style1">
+<style>
 input,
 select,
 textarea {
