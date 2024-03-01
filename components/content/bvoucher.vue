@@ -266,10 +266,10 @@
          id="title9">DateSubmitBox</title>
     </foreignObject>
  
-      <foreignObject id="PayTo" x="102.3" y="114.5" width="100%" height="36">
+      <foreignObject id="PayTo" x="102.3" y="114.5" width="460" height="36">
         <body xmlns="http://www.w3.org/1999/xhtml">
             <form>
-                <input type="text" size="80" />
+                <input type="text" size="120" />
             </form>
         </body>      
         <title
@@ -642,7 +642,8 @@
    }
    input,
    select,
-   textarea {
+   textarea,
+   form {
       font-family: Arial;
       font-size: 90%;
       background: rgba(255, 255, 255);
@@ -653,7 +654,15 @@
       border-color: transparent;
       }
       input[type=number] {
-      width: .120px;
+      font-family: Arial;
+      font-size: 90%;
+      background: rgba(255, 255, 255);
+      line-height: 130.5%;
+      resize: none;
+      border: none;
+      outline: none;
+      border-color: transparent;
+      width: 120px;
       }
       input[type=radio] {
       font-family: Arial;
