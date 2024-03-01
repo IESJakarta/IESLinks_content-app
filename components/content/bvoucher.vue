@@ -649,9 +649,9 @@
       line-height: 130.5%;
       resize: none;
       border-box: none;
-      border-color: transparent;
+      border-color: white;
       }
       input[type=number] {
-      width: .5em;
+      width: 64px;
       }
 </style>
