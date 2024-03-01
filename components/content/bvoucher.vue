@@ -645,13 +645,13 @@
    textarea {
       font-family: Arial;
       font-size: 90%;
-      background: rgba(255, 255, 255, 0);
+      background: rgba(255, 255, 255);
       line-height: 130.5%;
       resize: none;
       border-box: none;
       border-color: transparent;
       }
       input[type=number] {
-      width: 1em;
+      width: .5em;
       }
 </style>
