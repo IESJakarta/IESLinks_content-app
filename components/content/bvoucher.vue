@@ -12,7 +12,6 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
-
   <defs
      id="defs1">
     <clipPath
@@ -586,7 +585,7 @@
       <foreignObject id="AmountBox" x="593" y="148" width="200" height="34">
         <body xmlns="http://www.w3.org/1999/xhtml">
             <form>
-                <input type="text" step="0.01" size="14" style="text-align: right"/>
+                <input type="number" step="0.01" size="14" style="text-align: right"/>
             </form>
         </body>      
         <title
@@ -632,25 +631,22 @@
 </svg>
    </div>
 </template>
-<style>
-  div {
-      background-color = white;
+<style scoped>
+   div {
+      background-color: white;
    }
-</style>
-<style>
-input,
-select,
-textarea {
-   font-family: Arial;
-   font-size: 90%;
-   background: rgba(0,0,0,0);
-   line-height: 130.5%;
-   resize: none
-   border-box: none;
-   border-color: transparent;
-   }
-
-input.number {
-   width: 1em;
-   }
+   input,
+   select,
+   textarea {
+      font-family: Arial;
+      font-size: 90%;
+      background: rgba(0,0,0,0);
+      line-height: 130.5%;
+      resize: none
+      border-box: none;
+      border-color: transparent;
+      }
+   input.number {
+      width: 1em;
+      }
 </style>
