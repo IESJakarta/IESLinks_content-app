@@ -650,6 +650,6 @@
 </template>
 <style scoped>
 .div {
-   background-color = "white";
+   background-color = white;
 }
 </style>
