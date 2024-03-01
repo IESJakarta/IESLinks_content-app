@@ -645,7 +645,7 @@
    textarea {
       font-family: Arial;
       font-size: 90%;
-      background: rgba(0,0,0,0);
+      background: rgba(255, 255, 255, 0);
       line-height: 130.5%;
       resize: none;
       border-box: none;
