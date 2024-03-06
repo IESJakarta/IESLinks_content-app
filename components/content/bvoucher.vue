@@ -289,7 +289,7 @@
       <foreignObject id="AmountObj" x="593" y="148" width="200" height="34">
         <body xmlns="http://www.w3.org/1999/xhtml">
             <form>
-                <input id="AmountInput" type="number" step="0.01" size="14" style="text-align: right"/>
+                <input id="AmountInput" type="number" step="0.01" size="14" style="text-align: right"  class="form-control" oninput="amountinput"/>
             </form>
         </body>      
         <title
@@ -732,7 +732,7 @@ function ConvertToWords(num,cur)
 }
 
 
-function ammountinput() {
+function amountinput() {
    let f = document.getElementById('AmountInput').value; 
    
    if (document.getElementsByName("currency").value = "IDR") {
@@ -742,8 +742,8 @@ function ammountinput() {
    } else {
       var cur = "PLEASE SELECT A CURRENCY";
    }
-   value = ConvertToWords(f,cur);
-   document.getElementById("SayInput").innerHTML = value;
+   curText = ConvertToWords(f,cur);
+   document.getElementById("SayInput").value = curText;
 
 }
 </script>
