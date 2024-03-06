@@ -257,62 +257,62 @@
      
    
      <foreignObject id="DateSubmitObj" x="622" y="85" width="133" height="34">
-        <body xmlns="http://www.w3.org/1999/xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
             <form>
                 <input id="DateSubmitInput" type="date" size="80" />
             </form>
-        </body>      
+         </div>      
         <title
          id="title9">DateSubmitBox</title>
     </foreignObject>
  
       <foreignObject id="PayToObj" x="102.3" y="114.5" width="460" height="36">
-        <body xmlns="http://www.w3.org/1999/xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
             <form>
                 <input id="PayToInput" type="text" size="120" />
             </form>
-        </body>      
+         </div>      
         <title
          id="title10">PayTo</title>
     </foreignObject>
 
       <foreignObject id="CurrencyObj" x="551" y="140.8" width="36" height="50">
-         <body xmlns="http://www.w3.org/1999/xhtml">
+         <div xmlns="http://www.w3.org/1999/xhtml">
             <form>
                <input type="radio" name="currency" value="IDR" />
                <input type="radio" name="currency" value="USD" />
             </form>
-         </body>
+         </div>
          <title id="title11">Currency Selector</title>
       </foreignObject>
 
       <foreignObject id="AmountObj" x="593" y="148" width="200" height="34">
-        <body xmlns="http://www.w3.org/1999/xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
             <form>
                 <input id="AmountInput" type="number" step="0.01" size="14" style="text-align: right"  class="form-control" oninput="amountinput"/>
             </form>
-        </body>      
+         </div>      
         <title
          id="title12">AmountBox</title>
     </foreignObject>
 
       <foreignObject id="SayObj" x="83.1" y="148" width="437" height="35">
-        <body xmlns="http://www.w3.org/1999/xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
             <form>
                 <input id="SayInput" type="text" size="53" />
             </form>
-        </body>      
+         </div>      
         <title
          id="title13">SayBox</title>
     </foreignObject>
 
 
     <foreignObject id="BeingObj" x="105" y="180" width="640" height="112">
-        <body xmlns="http://www.w3.org/1999/xhtml" >
-        <form>
-         <textarea id="BeingTArea" name="BeingBox" rows="5" cols="83" wrap="soft" placeholder="Please input your transation details here." />
+      <div xmlns="http://www.w3.org/1999/xhtml" >
+         <form>
+           <textarea id="BeingTArea" name="BeingBox" rows="5" cols="83" wrap="soft" placeholder="Please input your transation details here." />
          </form>
-         </body>
+      </div>
          <title
          id="title14">BeingBox</title>
     </foreignObject>
@@ -320,11 +320,11 @@
 
 
       <foreignObject id="ReqDateObj" x="454" y="366" width="141" height="36">
-        <body xmlns="http://www.w3.org/1999/xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
             <form>
                 <input id="ReqDateInput" type="date" size="80" />
             </form>
-        </body>      
+         </div>      
         <title
          id="title15">ReqDateBox</title>
     </foreignObject>
