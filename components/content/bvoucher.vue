@@ -279,8 +279,8 @@
       <foreignObject id="CurrencyObj" x="551" y="140.8" width="36" height="50">
          <div xmlns="http://www.w3.org/1999/xhtml">
             <form>
-               <input type="radio" name="currency" value="IDR" />
-               <input type="radio" name="currency" value="USD" />
+               <input type="radio" id='idr' name="currency" value="IDR" />
+               <input type="radio" id='usd' name="currency" value="USD" />
             </form>
          </div>
          <title id="title11">Currency Selector</title>
@@ -289,7 +289,7 @@
       <foreignObject id="AmountObj" x="593" y="148" width="200" height="34">
         <div xmlns="http://www.w3.org/1999/xhtml">
             <form>
-                <input id="AmountInput" type="number" step="0.01" size="14" style="text-align: right"  class="form-control" oninput="amountinput"/>
+                <input id="AmountInput" type="number" step="0.01" size="14" style="text-align: right"  class="form-control" oninput="amountinput()"/>
             </form>
          </div>      
         <title
@@ -310,7 +310,7 @@
     <foreignObject id="BeingObj" x="105" y="180" width="640" height="112">
       <div xmlns="http://www.w3.org/1999/xhtml" >
          <form>
-           <textarea id="BeingTArea" name="BeingBox" rows="5" cols="83" wrap="soft" placeholder="Please input your transation details here." />
+           <textarea id="BeingTArea" name="BeingBox" rows="5" cols="83" wrap="soft" placeholder="Please input your transation details here."></textarea>
          </form>
       </div>
          <title
@@ -727,7 +727,7 @@ function ConvertToWords(num,cur)
    if (num > 0)
       cWords += ConvertToHundreds(num) + " /100 " + (cur);
    else
-      cWords += "00/100 " + (cur);
+      cWords += (cur);
    return cWords;
 }
 
@@ -735,9 +735,9 @@ function ConvertToWords(num,cur)
 function amountinput() {
    let f = document.getElementById('AmountInput').value; 
    
-   if (document.getElementsByName("currency").value = "IDR") {
+   if (document.querySelector('input[name="currency"]:checked').value == "IDR") {
    var cur = "Rupiah";
-   } else if (document.getElementById("currency").value = "USD") {
+   } else if (document.querySelector('input[name="currency"]:checked').value == "USD") {
    var cur = "US Dollars";
    } else {
       var cur = "PLEASE SELECT A CURRENCY";
