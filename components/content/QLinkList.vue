@@ -89,3 +89,6 @@ const show = ref(false);
 
 
 </script>
+<style>
+@import "~/assets/css/global.css";
+</style>

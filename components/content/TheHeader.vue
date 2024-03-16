@@ -3,16 +3,8 @@
     <div class="topgrid">
       <div>
         <p>
-          <a
-            target="_blank"
-            rel="noopener"
-            href="https://iesjakarta.org"
-            aria-label="IES Jakarta"
-          >
-            <img
-              src="~assets/graphics/IES-logoOptimized.svg"
-              alt="IES Jakarta (IESJakarta)"
-            />
+          <a target="_blank" rel="noopener" href="https://iesjakarta.org" aria-label="IES Jakarta">
+            <img src="~assets/graphics/IES-logoOptimized.svg" alt="IES Jakarta (IESJakarta)" />
           </a>
         </p>
         <h1 id="ptitle">IES Jakarta</h1>
@@ -24,43 +16,23 @@
     </div>
     <div class="innercolumns">
       <div class="item1">
-        <a
-          target="_blank"
-          rel="noopener"
-          href="https://iesjak.art/a/iesfbpage"
-          aria-label="IES Jakarta facebook"
-        >
+        <a target="_blank" rel="noopener" href="https://iesjak.art/a/iesfbpage" aria-label="IES Jakarta facebook">
           <ExternalLogosFacebooklogosm />
         </a>
       </div>
       <div class="item2">
-        <a
-          target="_blank"
-          rel="noopener"
-          href="https://iesjak.art/a/iesigpage"
-          aria-label="IES Jakarta instagram"
-        >
+        <a target="_blank" rel="noopener" href="https://iesjak.art/a/iesigpage" aria-label="IES Jakarta instagram">
           <ExternalLogosInstagramlogosm />
         </a>
       </div>
 
       <div class="item3">
-        <a
-          target="_blank"
-          rel="noopener"
-          href="https://iesjak.art/a/iesyt"
-          aria-label="IES Jakarta youtube"
-        >
+        <a target="_blank" rel="noopener" href="https://iesjak.art/a/iesyt" aria-label="IES Jakarta youtube">
           <ExternalLogosYouTubeLogosm />
         </a>
       </div>
       <div class="item4">
-        <a
-          target="_blank"
-          rel="noopener"
-          href="mailto:comm@iesjakarta.org"
-          aria-label="IES Jakarta email_address"
-        >
+        <a target="_blank" rel="noopener" href="mailto:comm@iesjakarta.org" aria-label="IES Jakarta email_address">
           <ExternalLogosEmailLogosm />
         </a>
       </div>
@@ -70,6 +42,9 @@
 <script>
 export default {};
 </script>
+<style scoped>
+@import '~/assets/css/global.css';
+</style>
 
 
 
