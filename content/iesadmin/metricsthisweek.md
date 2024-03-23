@@ -12,7 +12,11 @@ layout: text-page
 ::metricsThisWeek
 ::
 
+<br>
 
-<br><br><br><br><br>
+::refreshbutton
+::
+
+<br>
 
 ::TheFooter

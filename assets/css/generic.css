@@ -80,11 +80,17 @@ h2 {
   grid-template-columns: 1fr auto 1fr;
   -moz-box-align: center;
   color: #ffffff;
-  text-align: center
+  text-align: center;
 }
 
 .topgrid_L {
   grid-column: 1;
+}
+
+.topgrid_c {
+  color: #ffffff;
+  text-align: center;
+  grid-column: 2;
 }
 
 .topgrid_R {
