@@ -2,7 +2,11 @@
 title: 'IES Metrics for This Week'
 layout: text-page
 ---
-# Metrics This Week
+<div class="topgrid">
+<div>
+<h1> Metrics This Week </h1>
+</div>
+</div>
 
 
 ::metricsThisWeek
