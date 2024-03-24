@@ -9,6 +9,9 @@ const { data: count } = await useFetch(url)
 const k = Object.keys(count.value)
 console.log("This is k: " + k)
 
+let weekenddate = (
+  count.value[""]
+)
 let kidscount = 0
 for (var i in k) {
   kidscount += Number([count.value[k[i]]["Kids / Kids Area"]])
@@ -31,7 +34,10 @@ let totalAttendance = (adultscount + teenscount + kidscount)
 <template>
   <div class=topgrid style="text-align: left">
     <p></p>
-    <h3>Service Attendance This Week</h3>
+    <span style="text-align: center">
+      <h2>{{ weekenddate }}</h2>
+      <h3>IES Service Attendance This Week</h3>
+    </span>
     <p></p>
     <p></p>
     <ul>
@@ -45,19 +51,19 @@ let totalAttendance = (adultscount + teenscount + kidscount)
 
     <div>
       <p>
-      <h3>Total Headcounts by Ministry</h3>
+        <span style="text-align: center">
+          <h3>IES Total Headcounts by Ministry</h3>
+        </span>
       </p>
-
+      <ul>
       <tr style="text-align: right; line-height: 1.2em; margin-bottom: 0px;" v-if="kidscount">
         <td>Total Kids:</td>
         <td style="text-align: right; padding-left: 1em;"> {{ kidscount }} </td>
       </tr>
-
       <tr style="text-align: right; line-height: 1.2em; margin-bottom: 0px;" v-if="teenscount">
         <td>Total Teens:</td>
         <td style="text-align: right; padding-left: 1em;"> {{ teenscount }} </td>
       </tr>
-
       <tr style="text-align: right; line-height: 1.2em; margin-bottom: 0px;" v-if="adultscount">
         <td>Total Adults:</td>
         <td style="text-align: right; padding-left: 1em;"> {{ adultscount }} </td>
@@ -66,6 +72,7 @@ let totalAttendance = (adultscount + teenscount + kidscount)
         <td>All Weekend:<br>Total Attendance</td>
         <td style="text-align: right; padding-left: 1em;"> {{ totalAttendance }}</td>
       </tr>
+    </ul>
     </div>
   </div>
 
