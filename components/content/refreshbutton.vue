@@ -13,8 +13,8 @@ const refreshAll = async () => {
 <template>
     <div class="topgrid">
         <span class="topgrid_c">
-            <button :disabled="refreshing" @click="refreshAll">
-                Refetch All Data
+            <button :disabled="refreshing" @click="refreshAll" style="padding: .4em;">
+                Refresh Data
             </button>
         </span>
     </div>

@@ -42,21 +42,21 @@ let totalAttendance = (adultscount + teenscount + kidscount)
     <ul>
       <li v-for="(x, key) in count" style="line-height: 2em; margin-left: 1.3em; margin-bottom: 1.5em;">{{ key }}
         <table style=" margin: 0px auto;">
-        <tr v-for="(y, loc) in x" style="text-align: right; line-height: 1.2em;">
-          <td> {{ loc }}: </td>
-          <td style="text-align: right; padding-left: 1em;"> {{ y }}</td>
-        </tr>
-      </table>
+          <tr v-for="(y, loc) in x" style="text-align: right; line-height: 1.2em;">
+            <td> {{ loc }}: </td>
+            <td style="text-align: right; padding-left: 1em;"> {{ y }}</td>
+          </tr>
+        </table>
       </li>
     </ul>
 
     <div>
       <span style="text-align: center">
         <h3 style="margin-bottom: .2em;">IES Total Headcounts by Ministry</h3>
-        <h3  style="margin-bottom: 0;">Weekend of {{ weekenddate }}</h3>
+        <h3 style="margin-bottom: 0;">Weekend of {{ weekenddate }}</h3>
       </span>
       <p></p>
-    <p></p>      
+      <p></p>
       <table style="margin: 0px auto; border-spacing: 0; border-collapse: collapse;">
         <tr style="text-align: right; line-height: 1.2em;" v-if="kidscount">
           <td>Total Kids:</td>
@@ -71,10 +71,15 @@ let totalAttendance = (adultscount + teenscount + kidscount)
           <td style="text-align: right; padding-left: 1em;"> {{ adultscount }} </td>
         </tr>
         <tr style="text-align: right; line-height: 1.2em; " v-if="adultscount">
-          <td style="text-align: right; line-height: 1.2em; border-top: 3px double White;">Total Attendance<br>All Weekend:</td>
+          <td style="text-align: right; line-height: 1.2em; border-top: 3px double White;">Total Attendance<br>All
+            Weekend:</td>
           <td style="text-align: right; padding-left: 1em; border-top: 3px double white;"> {{ totalAttendance }}</td>
         </tr>
       </table>
+      <div>
+        <br><br>
+        <refreshbutton />
+      </div>
     </div>
   </div>
 

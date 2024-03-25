@@ -6,18 +6,12 @@ layout: text-page
 <div>
 <h1> IES Weekend Metrics </h1>
 <br>
-
 </div>
 </div>
 
-
-::metricsThisWeek
+::metricsInPrThisWeek
 ::
 
-<br>
-
-::refreshbutton
-::
 
 <br>
 
