@@ -57,7 +57,7 @@ let totalAttendance = (adultscount + teenscount + kidscount)
       </span>
       <p></p>
     <p></p>      
-      <table style="margin: 0px auto;">
+      <table style="margin: 0px auto; border-spacing: 0; border-collapse: collapse;">
         <tr style="text-align: right; line-height: 1.2em;" v-if="kidscount">
           <td>Total Kids:</td>
           <td style="text-align: right; padding-left: 1em;"> {{ kidscount }} </td>
@@ -70,9 +70,9 @@ let totalAttendance = (adultscount + teenscount + kidscount)
           <td>Total Adults:</td>
           <td style="text-align: right; padding-left: 1em;"> {{ adultscount }} </td>
         </tr>
-        <tr style="text-align: right; line-height: 1.2em; border-top: 3px solid White;" v-if="adultscount">
-          <td>Total Attendance<br>All Weekend:</td>
-          <td style="text-align: right; padding-left: 1em; border-top: 3px solid white;"> {{ totalAttendance }}</td>
+        <tr style="text-align: right; line-height: 1.2em; " v-if="adultscount">
+          <td style="text-align: right; line-height: 1.2em; border-top: 3px double White;">Total Attendance<br>All Weekend:</td>
+          <td style="text-align: right; padding-left: 1em; border-top: 3px double white;"> {{ totalAttendance }}</td>
         </tr>
       </table>
     </div>
