@@ -12,6 +12,22 @@ layout: text-page
 ::metricsInPrThisWeek
 ::
 
+<br>
+
+::metricsTotalInPrThisWeek
+::
+
+<br>
+<br>
+
+
+::metricsOnlineThisWeek
+::
+
+<br>
+
+::refreshbutton
+::
 
 <br>
 
