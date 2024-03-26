@@ -14,15 +14,25 @@ layout: text-page
 
 <br>
 
+---
+
+<br>
+
 ::metricsTotalInPrThisWeek
 ::
 
 <br>
-<br>
 
+---
+
+<br>
 
 ::metricsOnlineThisWeek
 ::
+
+<br>
+
+---
 
 <br>
 
