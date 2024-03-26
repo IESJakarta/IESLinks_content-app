@@ -6,6 +6,17 @@ layout: text-page
 ::		
 <div class="grid-container">
 
+
+<t> IES Metrics This Week </t>
+
+## [IES Weekend Metrics Page](./metricsthisweek)
+Headcounts metrics for this week. [IES Weekend Metrics](./metricsthisweek).
+
+<br>
+<br>
+
+
+
 <t>IES Admin Resources</t>
 
 ## [Bank Voucher](https://vouchers.pages.dev/20240225_FA%20Rev.%20Bank%20Voucher.html)
