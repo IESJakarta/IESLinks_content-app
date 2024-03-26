@@ -9,6 +9,12 @@ layout: text-page
 </div>
 </div>
 
+---
+
+<br>
+<br>
+
+
 ::metricsInPrThisWeek
 ::
 
@@ -17,14 +23,18 @@ layout: text-page
 ---
 
 <br>
+<br>
 
 ::metricsTotalInPrThisWeek
 ::
 
 <br>
+<br>
 
 ---
 
+<br>
+<br>
 <br>
 
 ::metricsOnlineThisWeek
