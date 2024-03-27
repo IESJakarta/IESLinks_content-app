@@ -60,7 +60,8 @@
 
 import { ExpandSection } from '#components'
 const { data: links } = await useFetch(
-  "https://api.steinhq.com/v1/storages/6166a6bb8d29ba2379f93001/IES_Links_Page"
+  "https://script.google.com/macros/s/AKfycbwu2rnPjBFrDZbDGyuN8Q53sU8DWKpQJugvvjxUJpaJVp0m0Yd8tTu10HCBnTZNbfZH8Q/exec?links"
+  // "https://api.steinhq.com/v1/storages/6166a6bb8d29ba2379f93001/IES_Links_Page"
 );
 
 const showlinks = computed(() =>
