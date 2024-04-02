@@ -37,7 +37,7 @@ let totalAttendance = (adultscount + teenscount + kidscount)
     <p></p>
     <p></p>
     <ul>
-      <li v-for="(x, key) in count.servicedata" style="line-height: 2em; margin-left: 1.3em; margin-bottom: 1.5em;">{{ key }}s
+      <li v-for="(x, key) in count.servicedata" style="line-height: 2em; margin-left: 1.3em; margin-bottom: 1.5em;">{{ key }}
         <table style=" margin: 0px auto;">
           <tr v-for="(y, loc) in x" style="text-align: right; line-height: 1.2em;">
             <td> {{ loc }}: </td>
