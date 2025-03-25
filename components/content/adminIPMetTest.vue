@@ -9,7 +9,7 @@ var { data: hcount } = await useFetch(url)
     <p></p>
     <span style="text-align: center">
       <h3 style="margin-bottom: .2em;">IES Service Attendance</h3>
-      <h3 style="margin-bottom: 0;">Weekend of {{ count["Weekend Date"] }}</h3>
+      <h3 style="margin-bottom: 0;">Weekend of </h3>
     </span>
     <p></p>
     <p></p>
