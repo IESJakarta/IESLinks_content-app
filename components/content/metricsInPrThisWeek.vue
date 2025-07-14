@@ -4,7 +4,7 @@ You can switch between the two branches.
 -->
 
 <script setup>
-const url = `https://script.google.com/macros/s/AKfycbyPaSNci1MpONbNBwpsvGhXB9ImofH5lbPxWRXvIO7DijdzVBH_j7uMhd0wxRQBoSPoaQ/exec?IPdata`
+const url = `data/IPdata.json`
 var { data: count } = await useFetch(url)
 </script>
 
