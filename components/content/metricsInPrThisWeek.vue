@@ -9,7 +9,6 @@ var { data: count } = await useFetch(url)
 
 <script setup>
 const { data: count } = await this.$content('IPdata').fetch();
-
 </script>
 
 <template>
