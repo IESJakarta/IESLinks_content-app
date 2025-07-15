@@ -1,9 +1,8 @@
 // server/api/ipdata.ts
+import { defineEventHandler } from 'h3';
+
+
 export default defineEventHandler(async (event) => {
-  const externalData = await $fetch('https://raw.githubusercontent.com/IESJakarta/IESLinks_content-app/refs/heads/main/public/data/IPdata.json'), {
-  headers: {
-    'Accept': 'application/vnd.github.v3+json',
-  },
-};
+  const externalData = await $fetch('https://api.github.com/repos/IESJakarta/IESLinks_content-app/contents/public/data/IPdata.json?ref=main');
   return externalData;
 });
