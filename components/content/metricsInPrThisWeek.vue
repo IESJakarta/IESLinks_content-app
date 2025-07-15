@@ -5,6 +5,9 @@ You can switch between the two branches.
 <!-- this works
 const url = `https://3ffc1e67.ieslinks-content-app.pages.dev/data/IPdata.json`
 var { data: count } = await useFetch(url)
+
+const url = `https://iesjak.art/data/IPdata.json`
+var { data: count } = await useFetch(url)
 -->
 <!-- ai script
 const { data: count } = await useAsyncData('IPdata', () => {
@@ -16,8 +19,9 @@ const { data: count } = await useFetch('/api/data')
 -->
 
 <script setup>
-const url = `https://iesjak.art/data/IPdata.json`
-var { data: count } = await useFetch(url)
+const { data: count } = await useAsyncData('github-file', () => 
+  $fetch('https://raw.githubusercontent.com/IESJakarta/IESLinks_content-app/refs/heads/main/public/data/IPTotals.json')
+)
 
 </script>
 
