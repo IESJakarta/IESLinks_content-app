@@ -9,7 +9,7 @@ const { data: count } = await useAsyncData('IPdata', () => {
 -->
 
 <script setup>
-const url = `~/data/IPdata.json`
+const url = `https://3ffc1e67.ieslinks-content-app.pages.dev/data/IPdata.json`
 var { data: count } = await useFetch(url)
 </script>
 
