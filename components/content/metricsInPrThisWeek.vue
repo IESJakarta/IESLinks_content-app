@@ -16,7 +16,7 @@ const { data: count } = await useFetch('/api/data')
 -->
 
 <script setup>
-const url = `IPdata.json`
+const url = `/IPdata.json`
 var { data: count } = await useFetch(url)
 </script>
 
