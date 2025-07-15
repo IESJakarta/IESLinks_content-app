@@ -21,8 +21,32 @@ const { data: count } = await useFetch('/api/data')
 -->
 
 <script setup>
-const responce = await useFetch('/api/IPdata')  
-const { data: count } = responce.content
+import { ref, onMounted } from 'vue';
+
+// A reactive variable to hold your IP data
+const data = ref(null);
+// A variable to hold any potential errors
+const error = ref(null);
+
+onMounted(async () => {
+  try {
+    // Fetch the raw data from the GitHub API
+    const response = await $fetch('https://api.github.com/repos/IESJakarta/IESLinks_content-app/contents/public/data/IPdata.json?ref=main');
+
+    // The actual content is in the 'content' property and is Base64 encoded.
+    // We need to decode it. The 'atob' function decodes a base-64 encoded string.
+    const decodedContent = atob(response.content);
+
+    // Parse the decoded JSON string into a JavaScript object
+    data.count = JSON.parse(decodedContent);
+
+  } catch (e) {
+    error.value = e;
+    console.error('Error fetching or parsing data:', e);
+  }
+});
+
+
 </script>
 
 <template>
