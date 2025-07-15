@@ -20,7 +20,7 @@ const { data: count } = await useFetch('/api/data')
 
 <script setup>
 const { data: count } = await useAsyncData('github-file', () => 
-  $fetch('https://raw.githubusercontent.com/IESJakarta/IESLinks_content-app/refs/heads/main/public/data/IPTotals.json')
+  $fetch('https://raw.githubusercontent.com/IESJakarta/IESLinks_content-app/refs/heads/main/public/data/IPdata.json')
 )
 
 </script>
