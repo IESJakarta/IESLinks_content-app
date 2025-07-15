@@ -3,14 +3,14 @@ This example fetches latest Vue.js commits data from GitHub’s API and displays
 You can switch between the two branches.
 -->
 <!-- old script
-const url = `data/IPdata.json`
-var { data: count } = await useFetch(url)
--->
-
-<script setup>
 const { data: count } = await useAsyncData('IPdata', () => {
   return queryContent('data/IPdata').find()
 })
+-->
+
+<script setup>
+const url = `data/IPdata.json`
+var { data: count } = await useFetch(url)
 </script>
 
 <template>
