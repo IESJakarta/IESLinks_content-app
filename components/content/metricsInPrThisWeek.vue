@@ -14,13 +14,17 @@ const { data: count } = await useAsyncData('IPdata', () => {
   return queryContent('data/IPdata').find()
 
 
-const { data: count } = await useFetch('/api/data')  
 })
+
+const { data: count } = await useFetch('/api/data')  
+
 -->
 
 <script setup>
-const url = `https://raw.githubusercontent.com/IESJakarta/IESLinks_content-app/refs/heads/main/public/data/IPdata.json`
-var { data: count } = await useFetch(url)
+const { data: count } = await useFetch('/api/ipdata', {
+  server: false, 
+})  
+
 </script>
 
 <template>
