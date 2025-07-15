@@ -9,11 +9,14 @@ var { data: count } = await useFetch(url)
 <!-- ai script
 const { data: count } = await useAsyncData('IPdata', () => {
   return queryContent('data/IPdata').find()
+
+
+const { data: count } = await useFetch('/api/data')  
 })
 -->
 
 <script setup>
-const url = `data/IPdata.json`
+const url = `IPdata.json`
 var { data: count } = await useFetch(url)
 </script>
 
