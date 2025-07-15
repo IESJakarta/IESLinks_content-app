@@ -21,7 +21,7 @@ const { data: count } = await useFetch('/api/data')
 -->
 
 <script setup>
-const { data: count } = await useFetch('/api/ipdata', {
+const { data, pending, error } = await useFetch('/api/ipdata', {
   server: false, 
 })  
 
@@ -32,12 +32,12 @@ const { data: count } = await useFetch('/api/ipdata', {
     <p></p>
     <span style="text-align: center">
       <h3 style="margin-bottom: .2em;">IES Service Attendance</h3>
-      <h3 style="margin-bottom: 0;">Weekend of {{ count["Weekend Date"] }}</h3>
+      <h3 style="margin-bottom: 0;">Weekend of {{ data["Weekend Date"] }}</h3>
     </span>
     <p></p>
     <p></p>
     <ul>
-      <li v-for="(x, key) in count.servicedata" style="line-height: 2em; margin-left: 1.3em; margin-bottom: 1.5em;">{{ key }}
+      <li v-for="(x, key) in data.servicedata" style="line-height: 2em; margin-left: 1.3em; margin-bottom: 1.5em;">{{ key }}
         <table style=" margin: 0px auto;">
           <tr v-for="(y, loc) in x" style="text-align: right; line-height: 1.2em;">
             <td> {{ loc }}: </td>
