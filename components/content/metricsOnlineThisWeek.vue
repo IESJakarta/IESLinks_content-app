@@ -1,10 +1,15 @@
 <!--
 This example fetches latest Vue.js commits data from GitHub’s API and displays them as a list.
 You can switch between the two branches.
+
+stuff that worked.
+const url = `https://script.google.com/macros/s/AKfycbyPaSNci1MpONbNBwpsvGhXB9ImofH5lbPxWRXvIO7DijdzVBH_j7uMhd0wxRQBoSPoaQ/exec?OLdata`
+var { data: count } = await useFetch(url)
+
 -->
 
 <script setup>
-const url = `https://script.google.com/macros/s/AKfycbyPaSNci1MpONbNBwpsvGhXB9ImofH5lbPxWRXvIO7DijdzVBH_j7uMhd0wxRQBoSPoaQ/exec?OLdata`
+const url = `https://iesjak.art/data/OLdata.json`
 var { data: count } = await useFetch(url)
 var k = Object.keys(count.value.servicedata)
 

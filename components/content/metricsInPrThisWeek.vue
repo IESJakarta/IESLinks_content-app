@@ -21,7 +21,8 @@ const { data: count } = await useFetch('/api/data')
 -->
 
 <script setup>
-const { data: count } = await useFetch('/data/IPdata');
+const url = `https://iesjak.art/data/IPdata.json`
+var { data: count } = await useFetch(url)
 </script>
 
 <template>
