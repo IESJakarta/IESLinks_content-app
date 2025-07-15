@@ -21,15 +21,12 @@ const { data: count } = await useFetch('/api/data')
 -->
 
 <script setup>
-import { ref, onMounted } from 'vue';
 
 const url = `'https://api.github.com/repos/IESJakarta/IESLinks_content-app/contents/public/data/IPdata.json?ref=main'`
 
 // A variable to hold any potential errors
 const error = ref(null);
 
-onMounted(async () => {
-  try {
     // Fetch the raw data from the GitHub API
     const response = await $fetch(url);
 
@@ -39,13 +36,6 @@ onMounted(async () => {
 
     // Parse the decoded JSON string into a JavaScript object
     const {data: count} = JSON.parse(decodedContent);
-
-  } catch (e) {
-    error.value = e;
-    console.error('Error fetching or parsing data:', e);
-  }
-});
-
 
 </script>
 
