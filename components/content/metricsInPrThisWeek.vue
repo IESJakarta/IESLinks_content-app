@@ -17,7 +17,7 @@ const { data: count } = await useFetch('/api/data')
 
 <script setup>
 const { data: count } = await useAsyncData('IPdata', () => 
-    queryContent('/data/IPdata')
+    queryContent('/data/IPdata').find()
 );
 </script>
 
