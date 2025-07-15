@@ -1,20 +1,16 @@
 // server/api/ipdata.ts
-import { cachedEventHandler } from '#nitro';
-
 export default cachedEventHandler(async (event) => {
   const externalDataUrl = 'https://raw.githubusercontent.com/IESJakarta/IESLinks_content-app/refs/heads/main/public/data/IPdata.json';
 
   try {
-    const data = await $fetch(externalDataUrl);
-    return data;
+    const response = await $fetch(githubRawUrl); // Use $fetch to make the request
+    return response; // Return the raw JSON data directly
   } catch (error) {
-    console.error('Error fetching external data:', error);
+    console.error('Error fetching GitHub raw JSON:', error);
+    // Handle errors appropriately, e.g., throw a custom error
     throw createError({
       statusCode: 500,
-      statusMessage: 'Error fetching external data'
+      statusMessage: 'Failed to fetch GitHub raw JSON',
     });
   }
-}, {
-  maxAge: 60 * 5, // Cache for 5 minutes (adjust as needed)
-  name: 'ipdata' // Unique key for your cached data
 });

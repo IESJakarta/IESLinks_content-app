@@ -21,10 +21,7 @@ const { data: count } = await useFetch('/api/data')
 -->
 
 <script setup>
-const { data, pending, error } = await useFetch('/api/ipdata', {
-  server: false, 
-})  
-
+const { data, pending, error } = await useFetch('/api/ipdata'); // Call your server API route
 </script>
 
 <template>
@@ -36,6 +33,7 @@ const { data, pending, error } = await useFetch('/api/ipdata', {
     </span>
     <p></p>
     <p></p>
+    <p v-if="loading">Loading data...</p>
     <ul>
       <li v-for="(x, key) in data.servicedata" style="line-height: 2em; margin-left: 1.3em; margin-bottom: 1.5em;">{{ key }}
         <table style=" margin: 0px auto;">
