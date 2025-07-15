@@ -19,7 +19,7 @@ const { data: count } = await useFetch('/api/data')
 -->
 
 <script setup>
-  const { data: count, error } = await $fetch('https://raw.githubusercontent.com/IESJakarta/IESLinks_content-app/refs/heads/main/public/data/IPdata.json');
+  const { data: count } = await useFetch('https://raw.githubusercontent.com/IESJakarta/IESLinks_content-app/refs/heads/main/public/data/IPdata.json');
 </script>
 
 <template>
