@@ -57,6 +57,9 @@ onMounted(async () => {
       <h3 style="margin-bottom: 0;">Weekend of {{ count["Weekend Date"] }}</h3>
     </span>
     <p></p>
+    <div v-if="error">
+      <p>Sorry, there was an error loading the data.</p>
+    </div>
     <p></p>
     <ul>
       <li v-for="(x, key) in count.servicedata" style="line-height: 2em; margin-left: 1.3em; margin-bottom: 1.5em;">{{ key }}
