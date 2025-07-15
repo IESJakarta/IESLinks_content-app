@@ -16,9 +16,9 @@ const { data: count } = await useFetch('/api/data')
 -->
 
 <script setup>
-const { data: count } = await useAsyncData('IPdata', () => 
-    queryContent('/data/IPdata').find()
-);
+const url = `https://3ffc1e67.ieslinks-content-app.pages.dev/data/IPdata.json`
+var { data: count } = await useFetch(url)
+
 </script>
 
 <template>
