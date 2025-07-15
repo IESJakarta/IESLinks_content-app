@@ -2,14 +2,18 @@
 This example fetches latest Vue.js commits data from GitHub’s API and displays them as a list.
 You can switch between the two branches.
 -->
-<!-- old script
+<!-- this works
+const url = `https://3ffc1e67.ieslinks-content-app.pages.dev/data/IPdata.json`
+var { data: count } = await useFetch(url)
+-->
+<!-- ai script
 const { data: count } = await useAsyncData('IPdata', () => {
   return queryContent('data/IPdata').find()
 })
 -->
 
 <script setup>
-const url = `https://3ffc1e67.ieslinks-content-app.pages.dev/data/IPdata.json`
+const url = `data/IPdata.json`
 var { data: count } = await useFetch(url)
 </script>
 
