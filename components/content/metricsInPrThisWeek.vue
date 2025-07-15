@@ -19,7 +19,9 @@ const { data: count } = await useFetch('/api/data')
 -->
 
 <script setup>
-const { data: count, pending, error, refresh } = await useFetch('/api/ipdata');
+const { data: count, pending, error, refresh } = await useFetch('/api/ipdata', {
+  server: false, 
+});
 
 </script>
 
