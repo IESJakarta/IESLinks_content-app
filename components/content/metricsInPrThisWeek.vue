@@ -23,8 +23,6 @@ const { data: count } = await useFetch('/api/data')
 <script setup>
 import { ref, onMounted } from 'vue';
 
-// A reactive variable to hold your IP data
-const data = ref(null);
 // A variable to hold any potential errors
 const error = ref(null);
 
@@ -38,7 +36,7 @@ onMounted(async () => {
     const decodedContent = atob(response.content);
 
     // Parse the decoded JSON string into a JavaScript object
-    data.count = JSON.parse(decodedContent);
+    const {data: count} = JSON.parse(decodedContent);
 
   } catch (e) {
     error.value = e;
