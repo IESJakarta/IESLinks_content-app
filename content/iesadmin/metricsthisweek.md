@@ -13,6 +13,11 @@ layout: text-page
 ---
 
 <br>
+this is the IpDataDisplay.vue component
+
+::IpDataDisplay
+::
+
 <br>
 
 
