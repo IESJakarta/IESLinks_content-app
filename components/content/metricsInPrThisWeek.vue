@@ -21,7 +21,7 @@ const { data: count } = await useFetch('/api/data')
 -->
 
 <script setup>
-const { data: count } = await useFetch('/api/data')  
+const { data: count } = await useFetch('/api/IPdata')  
 
 </script>
 
