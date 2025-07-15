@@ -16,7 +16,7 @@ const { data: count } = await useFetch('/api/data')
 -->
 
 <script setup>
-const url = `https://3ffc1e67.ieslinks-content-app.pages.dev/data/IPdata.json`
+const url = `https://raw.githubusercontent.com/IESJakarta/IESLinks_content-app/refs/heads/main/public/data/IPdata.json`
 var { data: count } = await useFetch(url)
 
 </script>
