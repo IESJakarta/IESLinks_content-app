@@ -33,7 +33,7 @@ let totalAttendance = (adultscount + teenscount + kidscount)
     <div>
       <span style="text-align: center">
         <h3 style="margin-bottom: .2em;">IES In Person Headcounts <br>Totals by Ministry</h3>
-        <h3  style="margin-bottom: 0;">Weekend of {{ count["Weekend Date"] }}</h3>
+        <h3  style="margin-bottom: 0;">Weekend of {{ kvData["Weekend Date"] }}</h3>
       </span>
       <p></p>
     <p></p>      
