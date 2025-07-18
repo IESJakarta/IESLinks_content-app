@@ -9,22 +9,22 @@ const { data: kvData, pending, error } = await useFetch('/api/my-kv-data');
 </script>
 var k = Object.keys(kvData.IPdata.value.servicedata)
 
-let kidskvData.IPdata = 0
+let kidscount = 0
 for (var i in k) {
-  kidskvData.IPdata += Number([kvData.IPdata.value.servicedata[k[i]]["Kids"]])
+  kidscount += Number([kvData.IPdata.value.servicedata[k[i]]["Kids"]])
 }
 
-let adultskvData.IPdata = 0
+let adultscount = 0
 for (var i in k) {
-  adultskvData.IPdata += Number([kvData.IPdata.value.servicedata[k[i]]["Adults"]])
+  adultscount += Number([kvData.IPdata.value.servicedata[k[i]]["Adults"]])
 }
 
-let teenskvData.IPdata = 0
+let teenscount = 0
 for (var i in k) {
-  teenskvData.IPdata += Number([kvData.IPdata.value.servicedata[k[i]]["Teens"]])
+  teenscount += Number([kvData.IPdata.value.servicedata[k[i]]["Teens"]])
 }
 
-let totalAttendance = (adultskvData.IPdata + teenskvData.IPdata + kidskvData.IPdata)
+let totalAttendance = (adultscount + teenscount + kidscount)
 
 </script>
 
@@ -33,25 +33,25 @@ let totalAttendance = (adultskvData.IPdata + teenskvData.IPdata + kidskvData.IPd
     <p></p>
     <div>
       <span style="text-align: center">
-        <h3 style="margin-bottom: .2em;">IES In Person HeadkvData.IPdatas <br>Totals by Ministry</h3>
-        <h3  style="margin-bottom: 0;">Weekend of {{ kvData.IPdata["Weekend Date"] }}</h3>
+        <h3 style="margin-bottom: .2em;">IES In Person Headcounts <br>Totals by Ministry</h3>
+        <h3  style="margin-bottom: 0;">Weekend of {{ count["Weekend Date"] }}</h3>
       </span>
       <p></p>
     <p></p>      
       <table style="margin: 0px auto; border-spacing: 0; border-collapse: collapse;">
-        <tr style="text-align: right; line-height: 1.2em;" v-if="kidskvData.IPdata">
+        <tr style="text-align: right; line-height: 1.2em;" v-if="kidscount">
           <td>Total Kids:</td>
-          <td style="text-align: right; padding-left: 1em;"> {{ kidskvData.IPdata }} </td>
+          <td style="text-align: right; padding-left: 1em;"> {{ kidscount }} </td>
         </tr>
-        <tr style="text-align: right; line-height: 1.2em;" v-if="teenskvData.IPdata">
+        <tr style="text-align: right; line-height: 1.2em;" v-if="teenscount">
           <td>Total Teens:</td>
-          <td style="text-align: right; padding-left: 1em;"> {{ teenskvData.IPdata }} </td>
+          <td style="text-align: right; padding-left: 1em;"> {{ teenscount }} </td>
         </tr>
-        <tr style="text-align: right; line-height: 1.2em;" v-if="adultskvData.IPdata">
+        <tr style="text-align: right; line-height: 1.2em;" v-if="adultscount">
           <td>Total Adults:</td>
-          <td style="text-align: right; padding-left: 1em;"> {{ adultskvData.IPdata }} </td>
+          <td style="text-align: right; padding-left: 1em;"> {{ adultscount }} </td>
         </tr>
-        <tr style="text-align: right; line-height: 1.2em; " v-if="adultskvData.IPdata">
+        <tr style="text-align: right; line-height: 1.2em; " v-if="adultscount">
           <td style="text-align: right; line-height: 1.2em; border-top: 3px double White;">Total Attendance<br>All Weekend:</td>
           <td style="text-align: right; padding-left: 1em; border-top: 3px double white;"> {{ totalAttendance }}</td>
         </tr>
