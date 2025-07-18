@@ -12,12 +12,12 @@ const { data: kvData, pending, error } = await useFetch('/api/my-kv-data');
     <p></p>
     <span style="text-align: center">
       <h3 style="margin-bottom: .2em;">IES Service Attendance</h3>
-      <h3 style="margin-bottom: 0;">Weekend of {{ kvData["Weekend Date"] }}</h3>
+      <h3 style="margin-bottom: 0;">Weekend of {{ kvData.IPdata["Weekend Date"] }}</h3>
     </span>
     <p></p>
     <p></p>
     <ul>
-      <li v-for="(x, key) in kvData.servicedata" style="line-height: 2em; margin-left: 1.3em; margin-bottom: 1.5em;">{{ key }}
+      <li v-for="(x, key) in kvData.IPdata.servicedata" style="line-height: 2em; margin-left: 1.3em; margin-bottom: 1.5em;">{{ key }}
         <table style=" margin: 0px auto;">
           <tr v-for="(y, loc) in x" style="text-align: right; line-height: 1.2em;">
             <td> {{ loc }}: </td>
