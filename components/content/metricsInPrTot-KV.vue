@@ -10,17 +10,17 @@ var k = Object.keys(kvData.IPdata.servicedata)
 
 let kidscount = 0
 for (var i in k) {
-  kidscount += Number([kvData.IPdata.servicedata[k[i]]["Kids"]])
+  kidscount += Number(kvData.IPdata.servicedata[k[i]]["Kids"])
 }
 
 let adultscount = 0
 for (var i in k) {
-  adultscount += Number([kvData.IPdata.servicedata[k[i]]["Adults"]])
+  adultscount += Number(kvData.IPdata.servicedata[k[i]]["Adults"])
 }
 
 let teenscount = 0
 for (var i in k) {
-  teenscount += Number([kvData.IPdata.servicedata[k[i]]["Teens"]])
+  teenscount += Number(kvData.IPdata.servicedata[k[i]]["Teens"])
 }
 
 let totalAttendance = (adultscount + teenscount + kidscount)
