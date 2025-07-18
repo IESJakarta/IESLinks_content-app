@@ -15,52 +15,11 @@ layout: text-page
 <br>
 <br>
 
+IES Metrics this week IPdata should show below.
+<br>
+
 
 ::metricsInPrThisWeek
 ::
 
 <br>
-
----
-
-<br>
-<br>
-::metricsInPr-KV
-::
-
-<br>
-<br>
-
-::metricsTotalInPrThisWeek
-::
-
-<br>
-<br>
-
----
-
-<br>
-<br>
-<br>
-
-::metricsOnlineThisWeek
-::
-
-<br>
-
-
-
-::metricsInPrSpServiceEvents
-::
-
-
----
-
-<br>
-
-::refreshbutton
-::
-
-<br>
-
-::TheFooter
