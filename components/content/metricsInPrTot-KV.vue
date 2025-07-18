@@ -4,9 +4,8 @@ You can switch between the two branches.
 -->
 
 <script setup>
-<script setup lang="ts">
 const { data: kvData, pending, error } = await useFetch('/api/my-kv-data');
-</script>
+
 var k = Object.keys(kvData.IPdata.servicedata)
 
 let kidscount = 0
