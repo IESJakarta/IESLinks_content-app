@@ -3,8 +3,8 @@
 
 <t> IES Metrics This Week </t>
 
-## [Testing IES This Week](/iesadmin/metricsthisweek)
-Headcounts metrics for this week. [IES Weekend Metrics](/iesadmin/metricsthisweek).
+## [Testing IES Metrics This Week](/iesadmin/iesmetricsthisweek)
+Headcounts metrics for this week. [IES Metrics This Week](/iesadmin/iesmetricsthisweek).
 
 <br>
 <br>
