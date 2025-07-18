@@ -6,7 +6,7 @@ export default defineEventHandler(async (event) => {
     const myKVBinding = event.context.cloudflare.env.MY_KV_BINDING; 
 
     // Retrieve data from KV
-    const data = await myKVBinding.get("your-key"); // Replace "your-key" with the key you want to retrieve
+    const data = await myKVBinding.get("ThisWeek"); // Replace "your-key" with the key you want to retrieve
 
     if (!data) {
       throw new Error('Data not found in KV');
