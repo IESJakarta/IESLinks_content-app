@@ -23,3 +23,12 @@ IES Metrics this week IPdata should show below.
 ::
 
 <br>
+<br>
+
+components/content/metricsInPrTot-KV.vue shows below here.
+::metricsInPrTot-KV
+::
+
+<br>
+<br>
+
