@@ -1,12 +1,11 @@
-// server/api/kv-data.ts
+// server/api/kv-data.get.ts
 
 export default defineEventHandler(async (event) => {
-  try {
-    // Access the KV namespace through the binding name you defined
-    const myValue = await event.context.cloudflare.env.metricskv.get("ThisWeek"); 
-    return { data: myValue };
-  } catch (error) {
-    console.error("Error accessing KV:", error);
-    return { error: "Failed to retrieve data from KV" };
-  }
+  const myKV = event.context.cloudflare.env.metricskv; // Replace MY_KV_NAMESPACE with your variable name
+
+  // Fetch a key from KV
+  const key = getQuery(event).key as string; // Get the key from the query parameters
+  const value = await myKV.get(key); 
+
+  return { data: value };
 });
