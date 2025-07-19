@@ -4,7 +4,7 @@ You can switch between the two branches.
 -->
 
 <script setup lang="ts">
-const { data: kvData, pending, error } = await useFetch('/api/kv-data');
+const { data: kvData, pending, error } = await myKVBinding.get("ThisWeek");
 </script>
 
 <template>
