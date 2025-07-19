@@ -27,11 +27,12 @@ const { data: kvData, pending, error } = await useFetch('/api/my-kv-data');
       </li>
     </ul>
     <p></p>
+    frog
     <p></p>
     <ul>
-      <li v-for="(x, key) in kvData.IPTotals.servicedata.E" style="line-height: 2em; margin-left: 1.3em; margin-bottom: 1.5em;">{{ key }}
+      <li v-for="(x, key) in kvData.IPTotals.servicedata" style="line-height: 2em; margin-left: 1.3em; margin-bottom: 1.5em;">{{ key }}
         <table style=" margin: 0px auto;">
-          <tr v-for="(y, loc) in x" style="text-align: right; line-height: 1.2em;">
+          <tr v-for="(y, loc) in x.E" style="text-align: right; line-height: 1.2em;">
             <td> {{ loc }}: </td>
             <td style="text-align: right; padding-left: 1em;"> {{ y }}</td>
           </tr>
