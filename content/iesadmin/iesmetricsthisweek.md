@@ -17,9 +17,7 @@ layout: text-page
 
 IES Metrics this week IPdata should show below.
 <br>
-
-
-::metricsInPrThisWeek
+::metricsInPr-KV
 ::
 
 <br>
