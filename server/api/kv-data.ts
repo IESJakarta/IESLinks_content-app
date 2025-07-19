@@ -1,11 +1,23 @@
-// server/api/kv-data.get.ts
-
+// server/api/kv-data.ts
 export default defineEventHandler(async (event) => {
-  const myKV = event.context.cloudflare.env.metricskv; // Replace MY_KV_NAMESPACE with your variable name
+  try {
+    // Access your KV binding through event.context.cloudflare.env
+    // Replace 'MY_KV_BINDING' with the name you gave your KV binding in the Cloudflare dashboard.
+    const myKVBinding = event.context.cloudflare.env.metricskv; 
 
-  // Fetch a key from KV
-  const key = getQuery(event).key as string; // Get the key from the query parameters
-  const value = await myKV.get(key); 
+    // Retrieve data from KV
+    const data = await myKVBinding.get("ThisWeek"); // Replace "your-key" with the key you want to retrieve
 
-  return { data: value };
+    if (!data) {
+      throw new Error('Data not found in KV');
+    }
+
+    return { data };
+  } catch (error) {
+    console.error("Error fetching data from KV:", error);
+    throw createError({
+      statusCode: 500,
+      statusMessage: 'Failed to retrieve data from KV',
+    });
+  }
 });
