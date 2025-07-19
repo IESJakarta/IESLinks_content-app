@@ -6,22 +6,15 @@ You can switch between the two branches.
 <script setup>
 const { data: kvData, pending, error } = await useFetch('/api/my-kv-data');
 
-var k = Object.keys(kvData.IPdata.servicedata)
 
-let kidscount = 0
-for (var i in k) {
-  kidscount += Number(kvData.IPdata.servicedata[k[i]]["Kids"])
-}
+let kidscount = Number([kvData.IPTotals.servicedata.E.Kids])
 
-let adultscount = 0
-for (var i in k) {
-  adultscount += Number(kvData.IPdata.servicedata[k[i]]["Adults"])
-}
 
-let teenscount = 0
-for (var i in k) {
-  teenscount += Number(kvData.IPdata.servicedata[k[i]]["Teens"])
-}
+let adultscount = Number([kvData.IPTotals.servicedata.E.Adults])
+
+
+let teenscount = Number([kvData.IPdata.servicedata.E.Teens])
+
 
 let totalAttendance = (adultscount + teenscount + kidscount)
 
