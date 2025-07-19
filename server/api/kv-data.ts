@@ -7,7 +7,7 @@ export default defineEventHandler(async (event) => {
 
     // Retrieve data from KV
     const data = await myKVBinding.get("ThisWeek"); // Replace "your-key" with the key you want to retrieve
-
+ 
     if (!data) {
       throw new Error('Data not found in KV');
     }
