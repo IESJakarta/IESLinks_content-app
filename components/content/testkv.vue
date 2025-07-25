@@ -4,7 +4,7 @@
 
     <template>
       <div>
-        <p>Data from KV: {{ data.ThisWeek.IPdata["Weekend Data"] }}</p>
+        <p>Data from KV: {{ data }}</p>
         <p>Using a for in pattern</p>
             <ul>
             <li v-for="(x, key) in data" style="line-height: 2em; margin-left: 1.3em; margin-bottom: 1.5em;">{{ key }}
