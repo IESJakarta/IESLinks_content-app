@@ -5,6 +5,6 @@
     <template>
       <div>
         <p>Data from KV: {{ data.ThisWeek.IPdata["Weekend Data"] }}</p>
-        <p>Service data???: {{ data.ThisWeek.IPdata.servicedata }}
+        <p>Service data???: {{ data.ThisWeek.IPdata.servicedata }}</p>
       </div>
     </template>
