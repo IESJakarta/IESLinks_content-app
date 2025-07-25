@@ -1,6 +1,6 @@
     <script setup>
     const { data } = await useFetch('/api/metricsKV')
-    const outstring = JSON.parse(data)
+    const outstring = JSON.parse(data.data)
     </script>
 
     <template>
