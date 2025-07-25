@@ -5,7 +5,7 @@
 
     <template>
       <div>
-        <p>outstring.ThisWeek: {{ outstring.ThisWeek }}
+        <p>outstring.ThisWeek: {{ outstring.ThisWeek }} </p>
         <p>Data from KV: {{ data.data }}</p>
         <p>Using a for in pattern</p>
             <ul>
