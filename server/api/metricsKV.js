@@ -1,6 +1,4 @@
-export default defineEventHandler(({ context }) => {
-  const MY_KV = context.cloudflare.env.metricskv;
-
-  return {
-message: 'Received data', data: MY_KV   };
-});
+export async function onRequest(context) {
+  const task = await context.env.metricskv.get("ThisWeek");
+  return new Response(task);
+}
