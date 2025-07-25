@@ -6,6 +6,6 @@ interface Env {
 
 export default defineEventHandler(async (event) => {
   const { MY_KV_NAMESPACE } = event.context.cloudflare.env as Env;
-  const myValue = await MY_KV_NAMESPACE.get('my_key');
+  const myValue = await MY_KV_NAMESPACE.get('ThisWeek');
   return { data: myValue };
 });
