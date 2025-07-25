@@ -1,20 +1,22 @@
-    <script setup>
-    const { data } = await useFetch('/api/metricsKV')
-    </script>
+<template>
+  <div v-if="data">
+    <h1>{{ data.ThisWeek }}</h1>
+    <p>{{ data.ThisWeek.IPdata }}</p>
+  </div>
+  <div v-else>
+    Loading content...
+  </div>
+</template>
 
-    <template>
-      <div>
-        <p>Data from KV: {{ data }}</p>
-        <p>Using a for in pattern</p>
-            <ul>
-            <li v-for="(x, key) in data." style="line-height: 2em; margin-left: 1.3em; margin-bottom: 1.5em;">{{ key }}
-                <table style=" margin: 0px auto;">
-                <tr v-for="(y, loc) in x" style="text-align: right; line-height: 1.2em;">
-                    <td> {{ loc }}: </td>
-                    <td style="text-align: right; padding-left: 1em;"> {{ y }}</td>
-                </tr>
-                </table>
-            </li>
-            </ul>
-      </div>
-    </template>
+<script setup>
+import { useFetch } from '#app';
+
+const props = defineProps({
+  key: {
+    type: String,
+    required: true
+  }
+});
+
+const { data } = await useFetch(`/api/content/${props.key}`);
+</script>

@@ -1,5 +1,6 @@
 export default defineEventHandler(({ context }) => {
-  const MY_KV = await context.env.metricskv;
+  const MY_KV = context.cloudflare.env.metricskv;
 
-  return MY_KV;
+  return {
+message: 'Received data', data: MY_KV   };
 });
