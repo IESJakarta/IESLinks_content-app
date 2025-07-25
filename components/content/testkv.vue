@@ -1,7 +1,10 @@
 <template>
-  <div v-if="data">
-    <h1>{{ data.ThisWeek }}</h1>
-    <p>{{ data.ThisWeek.IPdata }}</p>
+  <div v-if="error">
+    <p>Error: {{ error.message }}</p>
+  </div>
+  <div v-else-if="data">
+    <h1>{{ data.title }}</h1>
+    <p>{{ data.body }}</p>
   </div>
   <div v-else>
     Loading content...
@@ -18,5 +21,5 @@ const props = defineProps({
   }
 });
 
-const { data } = await useFetch(`/api/content/${props.key}`);
+const { data, error } = await useFetch(`/api/content/${props.key}`, {server: false});
 </script>
