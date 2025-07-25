@@ -1,11 +1,9 @@
     <script setup>
     const { data } = await useFetch('/api/metricsKV')
-  //  const outstring = JSON.parse(data)
     </script>
 
     <template>
       <div>
-        <p>outstring.ThisWeek: {{ outstring }} </p>
         <p>Data from KV: {{ data }}</p>
         <p>Using a for in pattern</p>
             <ul>
