@@ -1,20 +1,16 @@
-    <script setup>
-    const { data } = await useFetch('/api/metricsKV')
-    </script>
+<!-- components/MyComponent.vue -->
 
-    <template>
-      <div>
-        <p>Data from KV: {{ data.value }}</p>
-        <p>Using a for in pattern</p>
-            <ul>
-      <li v-for="(x, key) in value" style="line-height: 2em; margin-left: 1.3em; margin-bottom: 1.5em;">{{ key }}
-        <table style=" margin: 0px auto;">
-          <tr v-for="(y, loc) in x" style="text-align: right; line-height: 1.2em;">
-            <td> {{ loc }}: </td>
-            <td style="text-align: right; padding-left: 1em;"> {{ y }}</td>
-          </tr>
-        </table>
-      </li>
-    </ul>
-      </div>
-    </template>
+<template>
+  <div>
+    <h1 v-if="data">{{ data.data }}</h1>
+    <p v-if="pending">Loading...</p>
+    <p v-if="error">Error: {{ error.message }}</p>
+  </div>
+</template>
+
+<script setup lang="ts">
+import { useFetch } from '#app'; // Nuxt composable for data fetching
+
+const { data, pending, error } = await useFetch('/api/my-data'); //
+
+</script>
