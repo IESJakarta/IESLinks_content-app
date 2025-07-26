@@ -16,6 +16,8 @@
       <h3 style="margin-bottom: 0;">data {{ data }}</h3>
       <h3 style="margin-bottom: 0;">data.ThisWeek {{ data.ThisWeek }}</h3>
       <h3 style="margin-bottom: 0;">data.ThisWeek.IPdata {{ data.ThisWeek.IPdata }}</h3>
+      <h3 style="margin-bottom: 0;">thisweek data here >> {{ thisweek }}</h3>
+
 
     </span>
     <p></p>
@@ -36,5 +38,6 @@ li {
 import { useFetch } from '#app'; // Nuxt composable for data fetching
 
 const { data, pending, error } = await useFetch('/api/metricsKV'); //
+const thisweek = JSON.parse(data.ThisWeek)
 
 </script>
