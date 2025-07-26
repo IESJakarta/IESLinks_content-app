@@ -3,7 +3,7 @@
 <template>
   <div>
     new data
-    <h1 v-if="ThisWeek">{{ THisWeek }}</h1>
+    <h1 v-if="data.ThisWeek">{{ data.THisWeek }}</h1>
     <p v-if="pending">Loading...</p>
     <p v-if="error">Error: {{ error.message }}</p>
 
@@ -14,8 +14,8 @@
     <span style="text-align: center">
       <h3 style="margin-bottom: .2em;">IES Service Attendance</h3>
       <h3 style="margin-bottom: 0;">data {{ data }}</h3>
-      <h3 style="margin-bottom: 0;">data.ThisWeek {{ data.ThisWeek }}</h3>
- <!--     <h3 style="margin-bottom: 0;">thisWeekData here >> {{ thisWeekData.IPdata }}</h3>
+ <!--      <h3 style="margin-bottom: 0;">data.ThisWeek {{ data.ThisWeek }}</h3>
+     <h3 style="margin-bottom: 0;">thisWeekData here >> {{ thisWeekData.IPdata }}</h3>
 -->
 
     </span>
