@@ -36,6 +36,6 @@ li {
 <script setup lang="ts">
 import { useFetch } from '#app'; // Nuxt composable for data fetching
 
-const { data, pending, error } = await useFetch('/api/metricsKV'); //
+const { data: ThisWeek, pending, error } = await useFetch('/api/metricsKV'); //
 const thisWeekData = JSON.parse(data.ThisWeek)
 </script>
