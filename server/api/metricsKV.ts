@@ -5,7 +5,7 @@ declare module "h3" {
     cloudflare: {
       request: Request;
       env: {
-        MY_KV: KVNamespace; // Your KV namespace binding name
+        MY_KV: metricskv; // Your KV namespace binding name
       };
       context: ExecutionContext;
     };
@@ -18,7 +18,7 @@ export default defineEventHandler(async (event) => {
     const MY_KV = cloudflare.env.MY_KV; // Access your KV namespace
 
     // Example: Get a value from KV
-    const myValue = await MY_KV.get("myKey"); //
+    const myValue = await MY_KV.get("ThisWeek"); //
 
     if (myValue) {
       return { data: myValue }; // Return the data
