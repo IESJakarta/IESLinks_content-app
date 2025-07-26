@@ -15,8 +15,7 @@
       <h3 style="margin-bottom: .2em;">IES Service Attendance</h3>
       <h3 style="margin-bottom: 0;">data {{ data }}</h3>
       <h3 style="margin-bottom: 0;">data.ThisWeek {{ data.ThisWeek }}</h3>
-      <h3 style="margin-bottom: 0;">data.ThisWeek.IPdata {{ data.ThisWeek.IPdata }}</h3>
-      <h3 style="margin-bottom: 0;">thisweek data here >> {{ ipdata }}</h3>
+      <h3 style="margin-bottom: 0;">thisWeekData here >> {{ thisWeekData.ipdata }}</h3>
 
 
     </span>
@@ -38,5 +37,5 @@ li {
 import { useFetch } from '#app'; // Nuxt composable for data fetching
 
 const { data, pending, error } = await useFetch('/api/metricsKV'); //
-const ipdata = JSON.parse(data.ThisWeek.IPdata)
+const thisWeekData = JSON.parse(data.ThisWeek)
 </script>
