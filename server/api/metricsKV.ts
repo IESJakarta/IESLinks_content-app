@@ -21,7 +21,7 @@ export default defineEventHandler(async (event) => {
     const myValue = await MY_KV.get("ThisWeek"); //
 
     if (myValue) {
-      return { data: myValue }; // Return the data
+      return { ThisWeek: myValue }; // Return the data
     } else {
       throw createError({ statusCode: 404, message: "Data not found" });
     }
