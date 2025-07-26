@@ -15,7 +15,7 @@ declare module "h3" {
 export default defineEventHandler(async (event) => {
   try {
     const { cloudflare } = event.context; //
-    const MY_KV = cloudflare.env.MY_KV; // Access your KV namespace
+    const MY_KV = cloudflare.env.metricskv; // Access your KV namespace
 
     // Example: Get a value from KV
     const myValue = await MY_KV.get("ThisWeek"); //
