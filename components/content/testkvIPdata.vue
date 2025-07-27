@@ -36,7 +36,7 @@
 <script setup lang="ts">
 import { useFetch } from '#app'; // Nuxt composable for data fetching
 
-const { data: IPdata, data: pending, data: error } = await useFetch('/api/metricsKVIPdata'); //
+const { data: IPdata, pending, error } = await useFetch('/api/metricsKVIPdata'); //
 
 
 </script>
