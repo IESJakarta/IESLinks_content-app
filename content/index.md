@@ -1,8 +1,8 @@
 ::TheHeader
 ::
 
-metricsInPrThisWeek-KV
-::metricsInPrThisWeek-KV
+metricsInPrThisWeekKV
+::metricsInPrThisWeekKV
 ::
 
 
