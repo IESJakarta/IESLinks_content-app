@@ -3,7 +3,7 @@
 <template>
   <div>
     ThisWeek
-    <h1 v-if="data">{{ data }}</h1>
+    <h1 v-if="data">{{ data.data }}</h1>
     <p v-if="pending">Loading...</p>
     <p v-if="error">Error: {{ error.message }}</p>
 
