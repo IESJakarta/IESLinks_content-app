@@ -6,8 +6,8 @@
 
     IP
     <h1 v-if="data">{{ data }}</h1>
-    <p v-if="data.pending">Loading...</p>
-    <p v-if="data.error">Error: {{ data.error.message }}</p>
+    <p v-if="pending">Loading...</p>
+    <p v-if="error">Error: {{ data.error.message }}</p>
 
     
 
