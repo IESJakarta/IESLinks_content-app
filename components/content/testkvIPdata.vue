@@ -5,7 +5,7 @@
     ThisWeek
 
     IP
-    <h1 v-if="data">{{ IPdata }}</h1>
+    <h1 v-if="data">{{ data }}</h1>
     <p v-if="pending">Loading...</p>
     <p v-if="error">Error: {{ data.error.message }}</p>
 
@@ -15,7 +15,7 @@
       <p></p>
       <span style="text-align: center">
         <h3 style="margin-bottom: .2em;">IES Service Attendance</h3>
-        <h3 style="margin-bottom: 0;">data {{ IPdata }}</h3>
+        <h3 style="margin-bottom: 0;">data {{ data.data.IPdata }}</h3>
 
 
       </span>
@@ -36,7 +36,7 @@
 <script setup lang="ts">
 import { useFetch } from '#app'; // Nuxt composable for data fetching
 
-const { IPdata, pending, error } = await useFetch('/api/metricsKVIPdata'); //
+const { data, pending, error } = await useFetch('/api/metricsKVIPdata'); //
 
 
 </script>
