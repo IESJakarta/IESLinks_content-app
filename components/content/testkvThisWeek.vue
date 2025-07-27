@@ -2,16 +2,16 @@
 
 <template>
   <div>
-    ThisWeek
-    <h1 v-if="data">{{ data.ThisWeek }}</h1>
+    This Weekend Date ->>>>  
+    <h1 v-if="data">{{ data.ThisWeek["Weekend Date"] }}</h1>
     <p v-if="pending">Loading...</p>
     <p v-if="error">Error: {{ error.message }}</p>
 
     <div class=topgrid style="text-align: left">
       <p></p>
       <span style="text-align: center">
-        <h3 style="margin-bottom: .2em;">IES Service Attendance</h3>
-        <h3 style="margin-bottom: 0;">data --\-\->> {{ data.ThisWeek }} <<---</h3>
+        <h3 style="margin-bottom: .2em;">IES servicedata ->>> </h3>
+        <h3 style="margin-bottom: 0;">data --\-\->> {{ data.ThisWeek.servicedata }} <<---</h3>
 
 
       </span>
