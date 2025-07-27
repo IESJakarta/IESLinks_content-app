@@ -15,7 +15,7 @@
       <p></p>
       <span style="text-align: center">
         <h3 style="margin-bottom: .2em;">IES Service Attendance</h3>
-        <h3 style="margin-bottom: 0;">data {{ data.IPdata.servicedata }}</h3>
+        <h3 v-for="d in data.IPdata.servicedata" style="margin-bottom: 0;">data {{ d }}</h3>
 
 
       </span>
