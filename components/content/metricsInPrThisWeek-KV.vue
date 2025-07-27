@@ -2,14 +2,6 @@
 This example fetches latest Vue.js commits data from GitHub’s API and displays them as a list.
 You can switch between the two branches.
 -->
-
-<script setup lang="ts">
-import { useFetch } from '#app'; // Nuxt composable for data fetching
-
-const { data, pending, error } = await useFetch('/api/metricsKV'); //
-
-</script>
-
 <template>
   <div class=topgrid style="text-align: left">
     <p></p>
@@ -38,3 +30,9 @@ li {
   margin-bottom: 20px;
 }
 </style>
+<script setup lang="ts">
+import { useFetch } from '#app'; // Nuxt composable for data fetching
+
+const { data, pending, error } = await useFetch('/api/metricsKV'); //
+
+</script>
