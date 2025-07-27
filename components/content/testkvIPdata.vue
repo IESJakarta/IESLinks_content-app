@@ -6,6 +6,12 @@
     <h1 v-if="data.ThisWeek">{{ data.ThisWeek }}</h1>
     <p v-if="pending">Loading...</p>
     <p v-if="error">Error: {{ error.message }}</p>
+    <!-- 
+    IP
+    <h1 v-if="data.IPdata">{{ data.IPdata }}</h1>
+    <p v-if="IPdata.pending">Loading...</p>
+    <p v-if="IPdata.error">Error: {{ IPdata.error.message }}</p>
+  -->
 
     <div class=topgrid style="text-align: left">
       <p></p>
@@ -33,6 +39,7 @@
 import { useFetch } from '#app'; // Nuxt composable for data fetching
 
 const { data: ThisWeek, data: pending, data: error } = await useFetch('/api/metricsKV'); //
+// const { data: IPdata, data: pending, data: error } = await useFetch('/api/metricsKVIPdata'); //
 
 
 </script>
