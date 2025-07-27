@@ -2,11 +2,11 @@
 
 <template>
   <div>
-    ThisWeek
+  <!--    ThisWeek
     <h1 v-if="data.ThisWeek">{{ data.THisWeek }}</h1>
     <p v-if="pending">Loading...</p>
     <p v-if="error">Error: {{ error.message }}</p>
-
+  -->
     IP
     <h1 v-if="data.IPdata">{{ data.IPdata }}</h1>
     <p v-if="IPdata.pending">Loading...</p>
@@ -40,8 +40,8 @@ li {
 <script setup lang="ts">
 import { useFetch } from '#app'; // Nuxt composable for data fetching
 
-const { data: ThisWeek, data: ThisWeek.pending, data: ThisWeek.errort } = await useFetch('/api/metricsKV'); //
-const { data: IPdata, data: IPdata.pending, data: IPdata.error } = await useFetch('/api/metricsKVIPdata'); //
+// const { data: ThisWeek, data: pending, data: error } = await useFetch('/api/metricsKV'); //
+const { data: IPdata, data: pending, data: error } = await useFetch('/api/metricsKVIPdata'); //
 
 // const thisWeekData = JSON.parse(ThisWeek)
 </script>
