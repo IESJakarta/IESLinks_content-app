@@ -21,7 +21,7 @@ export default defineEventHandler(async (event) => {
     const myValue = await MY_KV.get("IPdata"); //
 
     if (myValue) {
-      return { data: myValue }; // Return the data
+      return { IPdata: myValue }; // Return the data
     } else {
       throw createError({ statusCode: 404, message: "Data not found" });
     }
