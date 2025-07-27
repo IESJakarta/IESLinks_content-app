@@ -5,9 +5,9 @@
     ThisWeek
 
     IP
-    <h1 v-if="data.IPdata">{{ data.IPdata }}</h1>
-    <p v-if="IPdata.pending">Loading...</p>
-    <p v-if="IPdata.error">Error: {{ IPdata.error.message }}</p>
+    <h1 v-if="data">{{ data }}</h1>
+    <p v-if="data.pending">Loading...</p>
+    <p v-if="data.error">Error: {{ data.error.message }}</p>
 
     
 
