@@ -6,17 +6,19 @@
     <h1 v-if="data">{{ data.ThisWeek.IPdata['Weekend Date'] }}</h1>
     <p v-if="pending">Loading...</p>
     <p v-if="error">Error: {{ error.message }}</p>
+  </div>
     <div>
       Just the data
       {{ data }}
     </div>
-    
+
     <div>
       this Week
       {{ data.ThisWeek }}
     </div>
 
-    <div>IPdata
+    <div>
+      IPdata
       {{ data.ThisWeek.IPdata }}
     </div>
 
