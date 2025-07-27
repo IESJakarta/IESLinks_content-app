@@ -4,13 +4,13 @@
   <div>
     ThisWeek
     <h1 v-if="data.ThisWeek">{{ data.THisWeek }}</h1>
-    <p v-if="TWpending">Loading...</p>
-    <p v-if="TWerror">Error: {{ TWerror.message }}</p>
+    <p v-if="pending">Loading...</p>
+    <p v-if="error">Error: {{ error.message }}</p>
 
     IP
     <h1 v-if="data.IPdata">{{ data.IPdata }}</h1>
-    <p v-if="IPpending">Loading...</p>
-    <p v-if="IPerror">Error: {{ IPerror.message }}</p>
+    <p v-if="IPdata.pending">Loading...</p>
+    <p v-if="IPdata.error">Error: {{ IPdata.error.message }}</p>
 
 
   <div class=topgrid style="text-align: left">
@@ -40,8 +40,8 @@ li {
 <script setup lang="ts">
 import { useFetch } from '#app'; // Nuxt composable for data fetching
 
-const { data: ThisWeek, data: TWpendingtw, data: TWerrort } = await useFetch('/api/metricsKV'); //
-const { data: IPdata, data: IPpending, data: IPerror } = await useFetch('/api/metricsKVIPdata'); //
+const { data: ThisWeek, data: ThisWeek.pending, data: ThisWeek.errort } = await useFetch('/api/metricsKV'); //
+const { data: IPdata, data: IPdata.pending, data: IPdata.error } = await useFetch('/api/metricsKVIPdata'); //
 
 // const thisWeekData = JSON.parse(ThisWeek)
 </script>
