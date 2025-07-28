@@ -7,7 +7,7 @@ You can switch between the two branches.
     <p></p>
     <span style="text-align: center">
       <h3 style="margin-bottom: .2em;">IES Service Attendance</h3>
-      <h3 style="margin-bottom: 0;">Weekend of {{ data.ThisWeek.IPdata['Weekend Date'] }}</h3>
+      <h3 v-if="data" style="margin-bottom: 0;">Weekend of {{ data.ThisWeek.IPdata['Weekend Date'] }}</h3>
     </span>
     <p></p>
     <p></p>
@@ -30,6 +30,7 @@ li {
   margin-bottom: 20px;
 }
 </style>
+
 <script setup lang="ts">
 import { useFetch } from '#app'; // Nuxt composable for data fetching
 

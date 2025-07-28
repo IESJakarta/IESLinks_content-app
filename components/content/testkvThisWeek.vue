@@ -8,17 +8,20 @@
     <p v-if="error">Error: {{ error.message }}</p>
 
     <div>
+      <br><br>
       Just the data
       {{ data }}
     </div>
 
     <div>
-      this Week
+      <br><br>
+      this Week - data.ThisWeek
       {{ data.ThisWeek }}
     </div>
 
     <div>
-      IPdata
+      <br><br>
+      IPdata - data.ThisWeek.IPdata
       {{ data.ThisWeek.IPdata }}
     </div>
 
@@ -26,8 +29,8 @@
     <div class=topgrid style="text-align: left">
       <p></p>
       <span style="text-align: center">
-        <h3 style="margin-bottom: .2em;">IES servicedata ->>> </h3>
-        <h3 style="margin-bottom: 0;">data --\-\->> {{ data.ThisWeek.IPdata.servicedata }} <<---< </h3>
+        <h3 style="margin-bottom: .2em;">IES servicedata - data.ThisWeek.IPdata.servicedata </h3>
+        <h3 style="margin-bottom: 0;">data --\-\->></h3><p>{{ data.ThisWeek.IPdata.servicedata }}</p><h3 style="margin-bottom: 0;"></h3> <<---< </h3>
 
 
       </span>
