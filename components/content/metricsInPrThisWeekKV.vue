@@ -1,6 +1,6 @@
 <template>
   <div>
-
+    metricsInPrThisWeekKV - >>>>
     <div>
       <h1 v-if="data">{{ data.ThisWeek.IPdata['Weekend Date'] }}</h1>
       <p v-if="pending">Loading...</p>
@@ -29,7 +29,7 @@
       </div>
     </div>
   </div>
-
+  <<<<- metricsInPrThisWeekKV
 </template>
 
 <style scoped>
@@ -40,7 +40,7 @@ li {
 </style>
 
 <script setup lang="ts">
-import { useFetch } from '#app'; // Nuxt composable for data fetching
+import { useFetch } from '#imports'; // Nuxt composable for data fetching
 
 const { data, pending, error } = await useFetch('/api/metricsKV');
 
