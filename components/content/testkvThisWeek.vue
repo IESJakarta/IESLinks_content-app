@@ -9,20 +9,20 @@
 
     <div>
       <br><br>
-      Just the data
-      {{ data }}
+      <p>Just the data</p>
+      <p>{{ data }}</p>
     </div>
 
     <div>
       <br><br>
-      this Week - data.ThisWeek
-      {{ data.ThisWeek }}
+      <p>this Week - data.ThisWeek</p>
+      <p>{{ data.ThisWeek }}</p>
     </div>
 
     <div>
       <br><br>
-      IPdata - data.ThisWeek.IPdata
-      {{ data.ThisWeek.IPdata }}
+      <p>IPdata - data.ThisWeek.IPdata</p>
+      <p>{{ data.ThisWeek.IPdata }}</p>
     </div>
 
 
