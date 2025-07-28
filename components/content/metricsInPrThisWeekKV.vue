@@ -1,7 +1,6 @@
 <!-- components/MyComponent.vue -->
 
 <template>
-
   <div class=topgrid style="text-align: left">
     <p></p>
     <span style="text-align: center">

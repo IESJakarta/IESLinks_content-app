@@ -33,12 +33,10 @@
         <h3 style="margin-bottom: 0;">data --VV--</h3>
         <p>{{ data.ThisWeek.IPdata.servicedata }}</p>
         <h3 style="margin-bottom: 0;"> ^^^ </h3>
-
-
       </span>
-      <p></p>
-      <p></p>
 
+      <p></p>
+      <p></p>
 
     </div>
     <div class=topgrid style="text-align: left">
