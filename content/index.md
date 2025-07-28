@@ -3,23 +3,8 @@
 
 <br />
 
-metricsInPrThisWeekKV - Index
-
-::metricsInPrThisWeekKV
-::
-
-<br />
-
-
 
 ::testkvThisWeek
-::
-
-<br />
-
-
-
-::testkvIPdata
 ::
 
 <br />
