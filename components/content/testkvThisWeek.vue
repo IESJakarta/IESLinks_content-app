@@ -36,7 +36,7 @@ li {
 </style>
 
 <script setup lang="ts">
-import { useFetch } from '#imports'; // Nuxt composable for data fetching
+//import { useFetch } from '#imports'; // Nuxt composable for data fetching
 
 const { data, pending, error } = await useFetch('/api/metricsKV'); //
 const weekedDate = data.ThisWeek.IPdata['Weekend Date'];
