@@ -30,7 +30,7 @@
       <p></p>
       <span style="text-align: center">
         <h3 style="margin-bottom: .2em;">IES servicedata - data.ThisWeek.IPdata.servicedata </h3>
-        <h3 style="margin-bottom: 0;">data --\-\->></h3><p>{{ data.ThisWeek.IPdata.servicedata }}</p><h3 style="margin-bottom: 0;"></h3> <<---< </h3>
+        <h3 style="margin-bottom: 0;">data --VV--</h3><p>{{ data.ThisWeek.IPdata.servicedata }}</p><h3 style="margin-bottom: 0;"> ^^^ </h3>
 
 
       </span>
