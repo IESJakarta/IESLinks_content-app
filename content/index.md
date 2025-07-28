@@ -8,15 +8,7 @@ metricsInPrThisWeekKV - Index
 
 <br />
 
-testkvThisWeek - Index
-::testkvThisWeek
-::
-<br />
 
-testkvIPdata - Index
-::testkvIPdata
-::
-<br />
 
 ::QLinkList
 ::
