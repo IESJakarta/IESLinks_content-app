@@ -24,7 +24,7 @@ layout: text-page
 
 <br>
 
-  ## metricsIPTotalskv
+## metricsIPTotalskv
 
 
 ::metricsIPTotalskv
@@ -36,7 +36,7 @@ layout: text-page
 
 <br>
 
-  ## metricsOnlineThisWeekkv
+## metricsOnlineThisWeekkv
 
 ::metricsOnlineThisWeekkv
 ::
