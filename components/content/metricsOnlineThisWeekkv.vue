@@ -5,7 +5,7 @@ You can switch between the two branches.
 <script setup lang="ts">
 import { useFetch } from '#app'; // Nuxt composable for data fetching
 
-const { data, pending, error } = await useFetch('/api/metricsKVIPdata'); //
+const { data, pending, error } = await useFetch('/api/metricsKVOLdata'); //
 
 var k = Object.keys(data.OLdata.value.servicedata)
 
@@ -33,7 +33,7 @@ let totalAttendance = (adultscount + teenscount + kidscount)
     <p></p>
     <span style="text-align: center">
       <h3 style="margin-bottom: .2em;">IES Online Service Headcounts</h3>
-      <h3 style="margin-bottom: 0;">Weekend of {{ count["Weekend Date"] }}</h3>
+      <h3 style="margin-bottom: 0;">Weekend of {{ data.OLdata["Weekend Date"] }}</h3>
     </span>
     <p></p>
     <p></p>

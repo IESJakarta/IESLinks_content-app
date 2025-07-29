@@ -15,20 +15,11 @@ layout: text-page
 <br>
 <br>
 
-metricsInPrThisWeekkv
-
 ::metricsInPrThisWeekkv
 ::
 
 <br>
-<br />
 
-testkvIPdata
-
-::testkvIPdata
-::
-
-<br />
 
 
 ---
@@ -47,9 +38,9 @@ testkvIPdata
 <br>
 <br>
 <br>
-metricsOnlineThisWeekKV
+metricsOnlineThisWeekkv
 
-::metricsOnlineThisWeekKV
+::metricsOnlineThisWeekkv
 ::
 
 <!--   <br>
