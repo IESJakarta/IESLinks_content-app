@@ -5,7 +5,6 @@ You can switch between the two branches.
 <template>
   <div class=topgrid style="text-align: left">
     <div v-if="data">
-      <div class=topgrid style="text-align: left">
         <p></p>
         <span style="text-align: center">
           <h3 style="margin-bottom: .2em;">IES Online Service Headcounts</h3>
@@ -26,7 +25,6 @@ You can switch between the two branches.
           </li>
         </ul>
       </div>
-    </div>
     <p v-if="pending">Loading...</p>
     <p v-if="error">Error: {{ error.message }}</p>
 
