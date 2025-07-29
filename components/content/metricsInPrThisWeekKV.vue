@@ -2,6 +2,8 @@
 
 <template>
   <div>
+    metricsInPrThisWeekKV.vue component getting data from /api/metricsKVIPdata
+
       <h1 v-if="data">{{ data.IPdata['Weekend Date'] }}</h1>
       <p v-if="pending">Loading...</p>
       <p v-if="error">Error: {{ error.message }}</p>
@@ -37,11 +39,7 @@ li {
 }
 </style>
 
-
 <script setup lang="ts">
 import { useFetch } from '#app'; // Nuxt composable for data fetching
-
 const { data, pending, error } = await useFetch('/api/metricsKVIPdata'); //
-
-
 </script>
