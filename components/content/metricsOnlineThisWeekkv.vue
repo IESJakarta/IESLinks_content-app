@@ -2,35 +2,15 @@
 This example fetches latest Vue.js commits data from GitHub’s API and displays them as a list.
 You can switch between the two branches.
 -->
-<script setup lang="ts">
-import { useFetch } from '#app'; // Nuxt composable for data fetching
-
-const { data, pending, error } = await useFetch('/api/metricsKVOLdata'); //
-
-var k = Object.keys(data.OLdata.value.servicedata)
-
-let kidscount = 0
-for (var i in k) {
-  kidscount += Number([data.OLdata.value.servicedata[k[i]]["Kids"]])
-}
-
-let adultscount = 0
-for (var i in k) {
-  adultscount += Number([data.OLdata.value.servicedata[k[i]]["Adults"]])
-}
-
-let teenscount = 0
-for (var i in k) {
-  teenscount += Number([data.OLdata.value.servicedata[k[i]]["Teens"]])
-}
-
-let totalAttendance = (adultscount + teenscount + kidscount)
-
-</script>
-
 <template>
   <div class=topgrid style="text-align: left">
-    <p></p>
+    <p>data</p>
+        <p>{{ data }}</p>
+
+    <p>data.OLdata</p>
+    <p>{{ data.OLdata }}</p>
+
+
     <span style="text-align: center">
       <h3 style="margin-bottom: .2em;">IES Online Service Headcounts</h3>
       <h3 style="margin-bottom: 0;">Weekend of {{ data.OLdata["Weekend Date"] }}</h3>
@@ -56,3 +36,29 @@ li {
   margin-bottom: 20px;
 }
 </style>
+
+<script setup lang="ts">
+import { useFetch } from '#app'; // Nuxt composable for data fetching
+
+const { data, pending, error } = await useFetch('/api/metricsKVOLdata'); //
+
+var k = Object.keys(data.OLdata.value.servicedata)
+
+let kidscount = 0
+for (var i in k) {
+  kidscount += Number([data.OLdata.value.servicedata[k[i]]["Kids"]])
+}
+
+let adultscount = 0
+for (var i in k) {
+  adultscount += Number([data.OLdata.value.servicedata[k[i]]["Adults"]])
+}
+
+let teenscount = 0
+for (var i in k) {
+  teenscount += Number([data.OLdata.value.servicedata[k[i]]["Teens"]])
+}
+
+let totalAttendance = (adultscount + teenscount + kidscount)
+
+</script>
