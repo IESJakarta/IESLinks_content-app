@@ -6,8 +6,8 @@ You can switch between the two branches.
 <script setup lang="ts">
 import { useFetch } from '#app'; // Nuxt composable for data fetching
 
-const { data, pending, error } = await useFetch('/api/metricsKV'); //
-const count = data.ThisWeek.IPdata
+const { data, pending, error } = await useFetch('/api/metricsKVIPdata'); //
+const count = data.IPdata
 var k = Object.keys(count.value.servicedata)
 
 let kidscount = 0

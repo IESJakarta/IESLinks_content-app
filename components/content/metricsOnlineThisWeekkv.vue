@@ -27,8 +27,6 @@ You can switch between the two branches.
       </div>
     <p v-if="pending">Loading...</p>
     <p v-if="error">Error: {{ error.message }}</p>
-
-
   </div>
 </template>
 

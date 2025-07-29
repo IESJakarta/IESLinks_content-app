@@ -23,6 +23,16 @@ layout: text-page
 ---
 
 <br>
+metricsTotalInPrThisWeekkv
+
+::metricsTotalInPrThisWeekkv
+::
+
+<br>
+
+---
+
+<br>
 metricsOnlineThisWeekkv
 
 ::metricsOnlineThisWeekkv
