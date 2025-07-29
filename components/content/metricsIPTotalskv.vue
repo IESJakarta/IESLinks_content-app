@@ -1,8 +1,8 @@
 <!-- components/MyComponent.vue -->
 
 <template>
-  <div>
-    <h1 v-if="data">{{ data.IPTotals['Weekend Date'] }}</h1>
+  <div class=topgrid style="text-align: left">
+    <h1 v-if="data">{{ data }}</h1>
     <p v-if="pending">Loading...</p>
     <p v-if="error">Error: {{ error.message }}</p>
   </div>
