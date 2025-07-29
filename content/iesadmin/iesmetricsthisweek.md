@@ -20,20 +20,7 @@ layout: text-page
 
 <br>
 
-
-
 ---
-<!--
-<br>
-<br>
-
-::metricsTotalInPrThisWeek
-::
-
-<br>
-<br>
-
------>
 
 <br>
 <br>
@@ -43,17 +30,7 @@ metricsOnlineThisWeekkv
 ::metricsOnlineThisWeekkv
 ::
 
-<!--   <br>
-
-
-
-::metricsInPrSpServiceEvents
-::
-
-
 ---
--->
-
 <br>
 
 ::refreshbutton

@@ -11,22 +11,12 @@ You can switch between the two branches.
     <p>{{ data.OLdata }}</p>
 
 
-    <span style="text-align: center">
-      <h3 style="margin-bottom: .2em;">IES Online Service Headcounts</h3>
-      <h3 style="margin-bottom: 0;">Weekend of {{ data.OLdata["Weekend Date"] }}</h3>
-    </span>
-    <p></p>
-    <p></p>
-    <ul>
-      <li v-for="(x, key) in data.OLdata.servicedata" style="line-height: 2em; margin-left: 1.3em; margin-bottom: 1.5em;">{{ key }}
-        <table style=" margin: 0px auto;">
-          <tr v-for="(y, loc) in x" style="text-align: right; line-height: 1.2em;">
-            <td> {{ loc }}: </td>
-            <td style="text-align: right; padding-left: 1em;"> {{ y }}</td>
-          </tr>
-        </table>
-      </li>
-    </ul>
+    <p>{{ kidscount }}</p>
+    <p>{{ adultscount }}</p>
+    <p>{{ teenscount }}</p>
+    <p>{{ totalAttendance }}</p>
+
+
   </div>
 </template>
 
