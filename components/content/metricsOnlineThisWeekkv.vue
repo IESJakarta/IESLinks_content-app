@@ -4,8 +4,11 @@ You can switch between the two branches.
 -->
 <template>
   <div class=topgrid style="text-align: left">
+    <h1 v-if="data">{{ data.OLdata['Weekend Date'] }}</h1>
+    <p v-if="pending">Loading...</p>
+    <p v-if="error">Error: {{ error.message }}</p>
     <p>data</p>
-        <p>{{ data }}</p>
+    <p>{{ data }}</p>
 
     <p>data.OLdata</p>
     <p>{{ data.OLdata }}</p>
@@ -31,7 +34,7 @@ li {
 import { useFetch } from '#app'; // Nuxt composable for data fetching
 
 const { data, pending, error } = await useFetch('/api/metricsKVOLdata'); //
-
+/** 
 var k = Object.keys(data.OLdata.value.servicedata)
 
 let kidscount = 0
@@ -50,5 +53,6 @@ for (var i in k) {
 }
 
 let totalAttendance = (adultscount + teenscount + kidscount)
+*/
 
 </script>

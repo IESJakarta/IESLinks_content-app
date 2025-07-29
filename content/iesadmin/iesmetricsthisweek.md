@@ -23,13 +23,12 @@ layout: text-page
 ---
 
 <br>
-<br>
-<br>
 metricsOnlineThisWeekkv
 
 ::metricsOnlineThisWeekkv
 ::
 
+<br>
 ---
 <br>
 
