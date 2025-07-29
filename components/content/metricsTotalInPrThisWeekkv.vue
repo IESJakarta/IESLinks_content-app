@@ -2,35 +2,9 @@
 This example fetches latest Vue.js commits data from GitHub’s API and displays them as a list.
 You can switch between the two branches.
 -->
-
-<script setup lang="ts">
-import { useFetch } from '#app'; // Nuxt composable for data fetching
-
-const { data, pending, error } = await useFetch('/api/metricsKVIPdata'); //
-const count = data.IPdata
-var k = Object.keys(count.value.servicedata)
-
-let kidscount = 0
-for (var i in k) {
-  kidscount += Number([count.value.servicedata[k[i]]["Kids"]])
-}
-
-let adultscount = 0
-for (var i in k) {
-  adultscount += Number([count.value.servicedata[k[i]]["Adults"]])
-}
-
-let teenscount = 0
-for (var i in k) {
-  teenscount += Number([count.value.servicedata[k[i]]["Teens"]])
-}
-
-let totalAttendance = (adultscount + teenscount + kidscount)
-
-</script>
-
 <template>
   <div class=topgrid style="text-align: left">
+      <div v-if="data">
     <p></p>
     <div>
       <span style="text-align: center">
@@ -59,6 +33,9 @@ let totalAttendance = (adultscount + teenscount + kidscount)
       </table>
     </div>
   </div>
+      <p v-if="pending">Loading...</p>
+      <p v-if="error">Error: {{ error.message }}</p>
+  </div>
 
 </template>
 
@@ -68,3 +45,29 @@ li {
   margin-bottom: 20px;
 }
 </style>
+
+<script setup lang="ts">
+import { useFetch } from '#app'; // Nuxt composable for data fetching
+
+const { data, pending, error } = await useFetch('/api/metricsKVIPdata'); //
+const count = data.IPdata
+var k = Object.keys(count.value.servicedata)
+
+let kidscount = 0
+for (var i in k) {
+  kidscount += Number([count.value.servicedata[k[i]]["Kids"]])
+}
+
+let adultscount = 0
+for (var i in k) {
+  adultscount += Number([count.value.servicedata[k[i]]["Adults"]])
+}
+
+let teenscount = 0
+for (var i in k) {
+  teenscount += Number([count.value.servicedata[k[i]]["Teens"]])
+}
+
+let totalAttendance = (adultscount + teenscount + kidscount)
+
+</script>
