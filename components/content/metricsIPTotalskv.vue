@@ -1,14 +1,14 @@
 <!-- components/MyComponent.vue -->
 
 <template>
-  <div class=topgrid style="text-align: left">
-
-
-    show something
-    {{ data.IPTotals }}
-    <h1 v-if="data">{{ data }}</h1>
-    <p v-if="pending">Loading...</p>
-    <p v-if="error">Error: {{ error.message }}</p>
+  <div>
+    <div class=topgrid style="text-align: left">
+      show something
+      {{ data.IPTotals }}
+      <h1 v-if="data">{{ data }}</h1>
+      <p v-if="pending">Loading...</p>
+      <p v-if="error">Error: {{ error.message }}</p>
+    </div>
   </div>
 </template>
 
