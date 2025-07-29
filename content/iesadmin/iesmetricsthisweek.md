@@ -15,9 +15,9 @@ layout: text-page
 <br>
 <br>
 
-metricsInPrThisWeekKV
+metricsInPrThisWeekkv
 
-::metricsInPrThisWeekKV
+::metricsInPrThisWeekkv
 ::
 
 <br>
