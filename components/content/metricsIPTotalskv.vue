@@ -1,14 +1,12 @@
 <!-- components/MyComponent.vue -->
-
 <template>
   <div>
-    metricsIPTotalskv.vue component getting data from /api/metricsKVIPTotals
+    <div v-if="data">
+      metricsIPTotalskv.vue component getting data from /api/metricsKVIPTotals
 
-    IP weekend date >>>>->
+      IP weekend date >>>>->
 
-      <h1 v-if="data">{{ data.IPTotals['Weekend Date'] }}</h1>
-      <p v-if="pending">Loading...</p>
-      <p v-if="error">Error: {{ error.message }}</p>
+      {{ data.IPTotals['Weekend Date'] }}
 
       <div class=topgrid style="text-align: left">
         <p>
@@ -32,6 +30,10 @@
         </ul>
       </div>
     </div>
+      <p v-if="pending">Loading...</p>
+      <p v-if="error">Error: {{ error.message }}</p>
+
+    </div>
 </template>
 
 <style scoped>
@@ -41,11 +43,7 @@ li {
 }
 </style>
 
-
 <script setup lang="ts">
 import { useFetch } from '#app'; // Nuxt composable for data fetching
-
 const { data, pending, error } = await useFetch('/api/metricsKVIPTotals'); //
-
-
 </script>
