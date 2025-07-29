@@ -1,6 +1,6 @@
 <!-- components/MyComponent.vue -->
 <template>
-  <div>
+  <div class=topgrid style="text-align: left">
     <div v-if="data">
       metricsIPTotalskv.vue component getting data from /api/metricsKVIPTotals
 
@@ -8,7 +8,7 @@
 
       {{ data.IPTotals['Weekend Date'] }}
 
-      <div class=topgrid style="text-align: left">
+      <div>
         <p>
           <span style="text-align: center">
             <h3 style="margin-bottom: .2em;">IES Service Attendance</h3>
@@ -30,10 +30,11 @@
         </ul>
       </div>
     </div>
+    <div>
       <p v-if="pending">Loading...</p>
       <p v-if="error">Error: {{ error.message }}</p>
-
     </div>
+  </div>
 </template>
 
 <style scoped>
