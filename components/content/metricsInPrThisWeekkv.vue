@@ -10,17 +10,18 @@
       </span>
       <p></p>
       <p></p>
-      <ul>
-        <li v-for="(x, key) in data.IPdata.servicedata"
-          style="line-height: 2em; margin-left: 1.3em; margin-bottom: 1.5em;">{{ key }}
-          <table style=" margin: 0px auto;">
-            <tr v-for="(y, loc) in x" style="text-align: right; line-height: 1.2em;">
-              <td> {{ loc }}: </td>
-              <td style="text-align: right; padding-left: 1em;"> {{ y }}</td>
+      <!-- Totals Summary Section -->
+      <div class="totals-summary" style="text-align: center; margin-top: 2em;">
+        <h3 style="margin-bottom: 1em;">Total Attendance Summary</h3>
+        <table style="margin: 0 auto; text-align: right; min-width: 200px;">
+          <tbody>
+            <tr v-for="(value, key) in totals" style="line-height: 1.8em;">
+              <td style="text-align: left;">{{ key }}:</td>
+              <td style="text-align: right; padding-left: 2em; font-weight: bold;">{{ value }}</td>
             </tr>
-          </table>
-        </li>
-      </ul>
+          </tbody>
+        </table>
+      </div>
     </div>
     <div>
       <h1>{{ totals }}</h1>
@@ -36,24 +37,43 @@ li {
   line-height: .9em;
   margin-bottom: 20px;
 }
-</style>
 
 <script setup>
 import { computed } from 'vue';
 import { useFetch } from '#app'; // Nuxt composable for data fetching
+
+// Fetch the data from the API endpoint
 const { data, pending, error } = await useFetch('/api/metricsKVIPdata');
 
+// A computed property to calculate totals from the fetched data.
+// This will automatically re-calculate whenever 'data' changes.
 const totals = computed(() => {
-  for (hc in (Object.keys(data.IPdata.servicedata))) {
-    for (i in hc) {
-      totals.Kids += Number([data.IPdata.servicedata[hc[i]]["Kids"]])}
-    for (i in hc) {
-      totals.Adults += Number([data.IPdata.servicedata[hc[i]]["Adults"]])}
-    for (i in hc) {
-      totals.Teens += Number([data.IPdata.servicedata[hc[i]]["Teens"]])}
-      
-    totals["Total Attendance"] = (totals.Adults + totals.Teens + totals.Kids)
+  // Return a default object if data is not yet loaded or is in an unexpected format.
+  // This prevents errors in the template during the loading phase.
+  if (!data.value || !data.value.IPdata || !data.value.IPdata.servicedata) {
+    return {
+      Adults: 0,
+      Teens: 0,
+      Kids: 0,
+      'Total Attendance': 0
+    };
   }
-})
 
+  // Use Object.values to get an array of service objects, then use reduce
+  // to sum up the values into a single totals object.
+  const calculatedTotals = Object.values(data.value.IPdata.servicedata).reduce((acc, service) => {
+    // For each service, add its count to the accumulator (acc).
+    // Coerce values to a Number and default to 0 if a value is missing.
+    acc.Adults += Number(service.Adults) || 0;
+    acc.Teens += Number(service.Teens) || 0;
+    acc.Kids += Number(service.Kids) || 0;
+    return acc;
+  }, { Adults: 0, Teens: 0, Kids: 0 }); // Initial values for the accumulator
+
+  // Calculate the final grand total
+  calculatedTotals['Total Attendance'] = calculatedTotals.Adults + calculatedTotals.Teens + calculatedTotals.Kids;
+
+  // Return the final calculated object
+  return calculatedTotals;
+});
 </script>
