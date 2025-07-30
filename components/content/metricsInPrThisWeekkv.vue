@@ -47,7 +47,7 @@ import { useFetch } from '#app'; // Nuxt composable for data fetching
 const { data, pending, error } = await useFetch('/api/metricsKVIPdata');
 
 const hc = await Object.keys(data.IPdata.servicedata);
-const totals = {};
+const totals = defineModel('totals', { type: Number, default: 0 })
 
 let kidscount = 0
 for ( i in hc) {
@@ -71,6 +71,5 @@ let totalAttendance = (adultscount + teenscount + kidscount)
 
 totals["Total Attendance"] = totalAttendance
 
-const props  = defineEmit<{totals}>()
 
 </script>
