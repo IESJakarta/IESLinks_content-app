@@ -32,10 +32,10 @@
 
       <!-- Display the calculated totals -->
       <div>
-        <h3>Totals Summary</h3>
+        <h3>Weekend Totals</h3>
         <table style="margin: 0 auto; text-align: left;">
             <tbody>
-                <tr v-for="(value, key) in totals">
+                <tr v-for="(value, key) in totals"  style="text-align: right; line-height: 1.2em;">
                     <td style="padding-right: 1em;">{{ key }}:</td>
                     <td>{{ value }}</td>
                 </tr>
