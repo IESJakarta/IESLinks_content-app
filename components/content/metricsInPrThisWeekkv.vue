@@ -37,6 +37,7 @@ li {
   line-height: .9em;
   margin-bottom: 20px;
 }
+</style>
 
 <script setup>
 import { computed } from 'vue';
