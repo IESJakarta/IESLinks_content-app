@@ -2,7 +2,7 @@
 
 <template>
   <div>
-    <h1 v-if="data">{{ data.ThisWeek.IPdata['Weekend Date'] }}</h1>
+    <h1 v-if="data">{{ data }}</h1>
     <p v-if="pending">Loading...</p>
     <p v-if="error">Error: {{ error.message }}</p>
 
@@ -30,8 +30,8 @@ li {
 <script setup lang="ts">
 import { useFetch } from '#app'; // Nuxt composable for data fetching
 const { data, pending, error } = await useFetch('/api/metricsKVdata'); //
-const ipdata = JSON.parse(data.ThisWeek.IPdata);
-const oldata = JSON.parse(data.ThisWeek.OLdata);
-const spservdata = JSON.parse(data.ThisWeek.SpServdata)
-const iptotals = JSON.parse(data.ThisWeek.IPTotals)
+const ipdata = data.ThisWeek.IPdata;
+const oldata = data.ThisWeek.OLdata;
+const spservdata = data.ThisWeek.SpServdata;
+const iptotals = data.ThisWeek.IPTotals;
 </script>
