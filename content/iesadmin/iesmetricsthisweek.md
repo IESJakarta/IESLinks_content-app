@@ -11,20 +11,8 @@ layout: text-page
 </div>
 
 ---
-<br>
-
-## metricsInPrTotalsThisWeek >>
-
-::metricsInPrTotalsThisWeek
-::
 
 <br>
-
----
-
-<br>
-
-## metricsInPrThisWeekkv >>
 
 ::metricsInPrThisWeekkv
 ::
@@ -35,8 +23,6 @@ layout: text-page
 
 <br>
 
-
-## metricsOnlineThisWeekkv >>
 
 ::metricsOnlineThisWeekkv
 ::
