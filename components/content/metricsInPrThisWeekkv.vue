@@ -50,15 +50,12 @@ const { data, pending, error } = await useFetch('/api/metricsKVIPdata');
 const totals = computed(() => {
   for (hc in (Object.keys(data.IPdata.servicedata))) {
     for (i in hc) {
-      totals.Kids += Number([data.IPdata.servicedata[hc[i]]["Kids"]]) return (Kids)
-    }
+      totals.Kids += Number([data.IPdata.servicedata[hc[i]]["Kids"]])}
     for (i in hc) {
-      totals.Adults += Number([data.IPdata.servicedata[hc[i]]["Adults"]]) return (Adults)
-    }
+      totals.Adults += Number([data.IPdata.servicedata[hc[i]]["Adults"]])}
     for (i in hc) {
-      totals.Teens += Number([data.IPdata.servicedata[hc[i]]["Teens"]])
-    }
-
+      totals.Teens += Number([data.IPdata.servicedata[hc[i]]["Teens"]])}
+      
     totals["Total Attendance"] = (totals.Adults + totals.Teens + totals.Kids)
   }
 })
