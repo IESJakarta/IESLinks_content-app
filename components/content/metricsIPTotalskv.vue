@@ -5,11 +5,9 @@
     <div class=topgrid style="text-align: left">
 
       <h1 v-if="data">{{ data.IPTotals["Weekend Date"] }}</h1>
-      <h1 v-else>No Data apparently</h1>
       <p v-if="pending">Loading...</p>
       <p v-if="error">Error: {{ error.message }}</p>
-    </div>
-    <div class=topgrid style="text-align: left">
+      <div class=topgrid style="text-align: left">
         <p>
           <span style="text-align: center">
             <h3 style="margin-bottom: .2em;">IES Service Attendance</h3>
@@ -30,6 +28,7 @@
           </li>
         </ul>
       </div>
+    </div>
   </div>
 </template>
 
@@ -48,5 +47,3 @@ const { data, pending, error } = await useFetch('/api/metricsKVIPTotals'); //
 
 
 </script>
-
-
