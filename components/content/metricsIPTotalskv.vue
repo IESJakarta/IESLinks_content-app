@@ -4,11 +4,12 @@
   <div>
     <div class=topgrid style="text-align: left">
 
-      <h1 v-if="data">{{ data.ThisWeek }}</h1>
+      <h1 v-if="data">{{ data.IPTotals }}</h1>
       <p v-if="pending">Loading...</p>
       <p v-if="error">Error: {{ error.message }}</p>
             <p> show something </p>
-      <p> {{ data }} </p>
+      <p> {{ data.IPTotals["Weekend Date"] }} </p>
+      <p> {{ data.IPTotals.servicedata["E"] }} </p>
     </div>
   </div>
 </template>
