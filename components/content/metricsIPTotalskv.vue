@@ -7,8 +7,8 @@
       <h1 v-if="data">{{ data }}</h1>
       <p v-if="pending">Loading...</p>
       <p v-if="error">Error: {{ error.message }}</p>
-            show something
-      {{ data.IPTotals }}
+            <p> show something </p>
+      <p> {{ data }} </p>
     </div>
   </div>
 </template>
@@ -24,7 +24,7 @@ li {
 <script setup lang="ts">
 import { useFetch } from '#app'; // Nuxt composable for data fetching
 
-const { data, pending, error } = await useFetch('/api/metricsKVIPdata'); //
+const { data, pending, error } = await useFetch('/api/metricsKVIPTotals'); //
 
 
 </script>

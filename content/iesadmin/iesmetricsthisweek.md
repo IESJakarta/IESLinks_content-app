@@ -13,25 +13,15 @@ layout: text-page
 ---
 
 <br>
+
 testkvThisWeek
-<br>
 
-
-::testkvThisWeek
-::
-
-<br>
----
-
-<br>
-testkvThisWeek
 <br>
 
 ::testkvThisWeek
 ::
 
 <br>
-
 ---
 
 <br>
