@@ -23,12 +23,8 @@
       </ul>
     </div>
     <div>
-      <table style=" margin: 0px auto;">
-        <tr v-for="(t, key) in totals" style="text-align: right; line-height: 1.2em;">
-          <td> Total {{ key }}: </td>
-          <td style="text-align: right; padding-left: 1em;"> {{ t }}</td>
-        </tr>
-      </table>
+      <h1>{{ totals }}</h1>
+
     </div>
     <p v-if="pending">Loading...</p>
     <p v-if="error">Error: {{ error.message }}</p>
