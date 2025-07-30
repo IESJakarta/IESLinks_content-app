@@ -1,10 +1,8 @@
 ::TheHeader
 ::
 
-<t> IES Metrics This Week </t>
+<t> IES Quick Links </t>
 
-
-<br>
 <br>
 
 <br />
