@@ -47,29 +47,22 @@ import { useFetch } from '#app'; // Nuxt composable for data fetching
 const { data, pending, error } = await useFetch('/api/metricsKVIPdata');
 
 const hc = await Object.keys(data.IPdata.servicedata);
-const totals = defineModel('totals', { type: Number, default: 0 })
+const totals = computed(() => {
 
-let kidscount = 0
+let Kids = 0
 for ( i in hc) {
-  kidscount += Number([data.IPdata.servicedata[hc[i]]["Kids"]])
-}
-totals.Kids = kidscount;
-
-let adultscount = 0
+  Kids += Number([data.IPdata.servicedata[hc[i]]["Kids"]])
+},
+let Adults = 0
 for ( i in hc) {
-  adultscount += Number([data.IPdata.servicedata[hc[i]]["Adults"]])
-}
-totals.Adults = adultscount;
+  Adults += Number([data.IPdata.servicedata[hc[i]]["Adults"]])
+},
 
-let teenscount = 0
+let Teens = 0
 for ( i in hc) {
-  teenscount += Number([data.IPdata.servicedata[hc[i]]["Teens"]])
-};
-totals.Teens = teenscount
-
-let totalAttendance = (adultscount + teenscount + kidscount)
-
-totals["Total Attendance"] = totalAttendance
-
+  Teens += Number([data.IPdata.servicedata[hc[i]]["Teens"]])
+},
+let "Total Attendance" = (adultscount + teenscount + kidscount)
+})
 
 </script>
