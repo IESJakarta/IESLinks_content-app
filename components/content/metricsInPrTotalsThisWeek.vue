@@ -8,38 +8,38 @@
     <p v-else-if="error">Error: {{ error.message }}</p>
 
     <!-- Display the data once it has been successfully fetched -->
-    <div v-else-if="data && data.IPdata">
-      <div style="text-align: center; margin-bottom: 2rem;">
+    <div v-if="data && data.IPdata">
+      <span style="text-align: center; display: block;">
         <h3 style="margin-bottom: .2em;">IES Service Attendance</h3>
         <h3 style="margin-bottom: 0;">Weekend of {{ data.IPdata['Weekend Date'] }}</h3>
-      </div>
-
-      <!-- Service-by-service breakdown -->
-      <ul style="list-style-type: none; padding: 0;">
+      </span>
+      <p></p>
+      <p></p>
+      <ul>
         <li v-for="(serviceDetails, serviceName) in data.IPdata.servicedata"
-            style="line-height: 2em; margin-bottom: 1.5em; border: 1px solid #eee; border-radius: 8px; padding: 1em;">
-          <strong>{{ serviceName }}</strong>
-          <table style="margin: 0.5em 0 0 1em; width: auto;">
+          style="line-height: 2em; margin-left: 1.3em; margin-bottom: 1.5em;">
+          {{ serviceName }}
+          <table style="margin: 0px auto;">
             <tbody>
-              <tr v-for="(count, category) in serviceDetails" style="text-align: left; line-height: 1.4em;">
-                <td style="padding-right: 1em;">{{ category }}:</td>
-                <td style="text-align: right; font-weight: 500;">{{ count }}</td>
+              <tr v-for="(count, category) in serviceDetails" style="text-align: right; line-height: 1.2em;">
+                <td> {{ category }}: </td>
+                <td style="text-align: right; padding-left: 1em;"> {{ count }}</td>
               </tr>
             </tbody>
           </table>
         </li>
       </ul>
 
-      <!-- Totals Summary Section -->
-      <div class="totals-summary" style="text-align: center; margin-top: 2em;">
-        <h3 style="margin-bottom: 1em;">Total Attendance Summary</h3>
-        <table style="margin: 0 auto; text-align: right; min-width: 200px;">
-          <tbody>
-            <tr v-for="(value, key) in totals" style="line-height: 1.8em;">
-              <td style="text-align: left;">{{ key }}:</td>
-              <td style="text-align: right; padding-left: 2em; font-weight: bold;">{{ value }}</td>
-            </tr>
-          </tbody>
+      <!-- Display the calculated totals -->
+      <div>
+        <h3>Totals Summary</h3>
+        <table style="margin: 0 auto; text-align: left;">
+            <tbody>
+                <tr v-for="(value, key) in totals">
+                    <td style="padding-right: 1em;">{{ key }}:</td>
+                    <td>{{ value }}</td>
+                </tr>
+            </tbody>
         </table>
       </div>
     </div>
@@ -51,12 +51,6 @@
 li {
   line-height: .9em;
   margin-bottom: 20px;
-}
-.topgrid {
-    max-width: 600px;
-    margin: 2rem auto;
-    padding: 1rem;
-    font-family: sans-serif;
 }
 </style>
 
