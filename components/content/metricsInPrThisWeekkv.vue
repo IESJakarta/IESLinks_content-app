@@ -22,8 +22,6 @@
         </li>
       </ul>
     </div>
-    <p v-if="pending">Loading...</p>
-    <p v-if="error">Error: {{ error.message }}</p>
     <div>
       <table style=" margin: 0px auto;">
         <tr v-for="(t, key) in totals" style="text-align: right; line-height: 1.2em;">
@@ -32,6 +30,8 @@
         </tr>
       </table>
     </div>
+    <p v-if="pending">Loading...</p>
+    <p v-if="error">Error: {{ error.message }}</p>
   </div>
 </template>
 
@@ -70,5 +70,7 @@ totals.Teens = teenscount
 let totalAttendance = (adultscount + teenscount + kidscount)
 
 totals["Total Attendance"] = totalAttendance
+
+const props  = defineEmit<{totals}>()
 
 </script>
