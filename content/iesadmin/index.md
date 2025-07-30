@@ -8,11 +8,12 @@ layout: text-page
 
 
 <t> IES Metrics This Week </t>
-
-## <sup>NEW</sup>  [IES Weekend Metrics This Week](/iesadmin/iesmetricsthisweek)
+<sub>NEW</sub> 
+## [IES Weekend Metrics This Week](/iesadmin/iesmetricsthisweek)
 Headcounts metrics for this week. [IES Weekend Metrics](/iesadmin/iesmetricsthisweek).
 
-## <sup>OLD</sup> [IES Weekend Metrics Page](/iesadmin/metricsthisweek)
+<sub>OLD</sub> 
+## [IES Weekend Metrics Page](/iesadmin/metricsthisweek)
 Headcounts metrics for this week. [IES Weekend Metrics](/iesadmin/iesmetricsthisweek).
 
 <br>
