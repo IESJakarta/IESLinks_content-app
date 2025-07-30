@@ -28,3 +28,5 @@ const { data, pending, error } = await useFetch('/api/metricsKVIPTotals'); //
 
 
 </script>
+
+
