@@ -14,6 +14,17 @@ layout: text-page
 
 <br>
 
+## test of metricsInPrSpServiceEventsKv
+
+::metricsInPrSpServiceEventsKv
+::
+
+<br>
+
+---
+
+<br>
+
 ::metricsInPrThisWeekkv
 ::
 
