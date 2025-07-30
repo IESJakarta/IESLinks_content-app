@@ -14,30 +14,6 @@ layout: text-page
 
 <br>
 
-testkvThisWeek
-
-<br>
-
-::testkvThisWeek
-::
-
-<br>
----
-
-<br>
-
-## metricsIPTotalskv
-
-
-::metricsIPTotalskv
-::
-
-<br>
-
----
-
-<br>
-
 ## metricsInPrThisWeekkv
 
 ::metricsInPrThisWeekkv
