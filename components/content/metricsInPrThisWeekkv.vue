@@ -31,8 +31,9 @@
       </ul>
 
       <!-- Display the calculated totals -->
-      <div>
+      <div><span style="text-align: center; display: block;">
         <h3>Weekend Totals</h3>
+      </span>
         <table style="margin: 0 auto; text-align: left;">
             <tbody>
                 <tr v-for="(value, key) in totals"  style="text-align: right; line-height: 1.2em;">
