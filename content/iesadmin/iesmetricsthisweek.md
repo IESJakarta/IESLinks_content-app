@@ -19,7 +19,9 @@ layout: text-page
 ::
 
 <br>
+
 ---
+
 <br>
 
 ## metricsInPrThisWeekkv >>
@@ -27,9 +29,12 @@ layout: text-page
 ::metricsInPrThisWeekkv
 ::
 
-<br>
+<br>  
+
 ---
+
 <br>
+
 
 ## metricsOnlineThisWeekkv >>
 
@@ -37,7 +42,9 @@ layout: text-page
 ::
 
 <br>
+
 ---
+
 <br>
 
 ::refreshbutton
