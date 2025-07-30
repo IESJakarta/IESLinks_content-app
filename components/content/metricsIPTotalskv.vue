@@ -5,9 +5,12 @@
     <div class=topgrid style="text-align: left">
 
       <h1 v-if="data">{{ data.IPTotals }}</h1>
+      
       <p v-if="pending">Loading...</p>
       <p v-if="error">Error: {{ error.message }}</p>
+      <h1 v-else>Oh no 😢</h1>
             <p> show something </p>
+            <p> {{  data }}</p>
       <p> {{ data.IPTotals["Weekend Date"] }} </p>
       <p> {{ data.IPTotals.servicedata["E"] }} </p>
     </div>
