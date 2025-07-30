@@ -27,16 +27,6 @@ You can switch between the two branches.
       </div>
     <p v-if="pending">Loading...</p>
     <p v-if="error">Error: {{ error.message }}</p>
-    <div>
-      <ul>
-        <li v-if="(t, key) in data.iptots" style="line-height: 2em; margin-left: 1.3em; margin-bottom: 1.5em;">
-          total {{ key }}:  {{ key[t] }}
-        </li>
-      </ul>
-
-
-
-    </div>
   </div>
 </template>
 
@@ -51,27 +41,6 @@ li {
 import { useFetch } from '#app'; // Nuxt composable for data fetching
 
 const { data, pending, error } = await useFetch('/api/metricsKVOLdata'); //
-
-var k = Object.keys(data.OLdata.value.servicedata)
-
-let kidscount = 0
-for (var i in k) {
-  kidscount += Number([data.OLdata.value.servicedata[k[i]]["Kids"]])
-}
-
-let adultscount = 0
-for (var i in k) {
-  adultscount += Number([data.OLdata.value.servicedata[k[i]]["Adults"]])
-}
-
-let teenscount = 0
-for (var i in k) {
-  teenscount += Number([data.OLdata.value.servicedata[k[i]]["Teens"]])
-}
-
-let totalAttendance = (adultscount + teenscount + kidscount)
-
-data.iptots = {Kids: kidscount, Teens: teenscount, Adults: adultscount, Totals: totalAttendance}
 
 
 </script>
