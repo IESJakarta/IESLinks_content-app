@@ -21,15 +21,6 @@ layout: text-page
 
 ---
 
-<br>
-# Testing metricsInPrTotalsThisWeek to see if there is a double line
-
-::metricsInPrTotalsThisWeek
-::
-
-<br>
-
----
 
 <br>
 
