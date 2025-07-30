@@ -47,22 +47,22 @@ import { useFetch } from '#app'; // Nuxt composable for data fetching
 const { data, pending, error } = await useFetch('/api/metricsKVIPdata'); //
 const totals = {},
 
-var k = Object.keys(data.IPdata.servicedata)
+cont k = Object.keys(data.IPdata.servicedata)
 
 let kidscount = 0
-for (var i in k) {
+for ( i in k) {
   kidscount += Number([data.IPdata.servicedata[k[i]]["Kids"]])
 }
 totals.Kids = kidscount;
 
 let adultscount = 0
-for (var i in k) {
+for ( i in k) {
   adultscount += Number([data.IPdata.servicedata[k[i]]["Adults"]])
 }
 totals.Adults = adultscount;
 
 let teenscount = 0
-for (var i in k) {
+for ( i in k) {
   teenscount += Number([data.IPdata.servicedata[k[i]]["Teens"]])
 };
 totals.Teens = teenscount
