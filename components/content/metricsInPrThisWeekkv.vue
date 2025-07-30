@@ -44,11 +44,10 @@ li {
 
 <script setup>
 import { useFetch } from '#app'; // Nuxt composable for data fetching
-const { data, pending, error } = await useFetch('/api/metricsKVIPdata'); //
-let totals = {},
-let hc = []
+const { data, pending, error } = await useFetch('/api/metricsKVIPdata');
 
-hc = await Object.keys(data.IPdata.servicedata);
+const hc = await Object.keys(data.IPdata.servicedata);
+const totals = {};
 
 let kidscount = 0
 for ( i in hc) {
