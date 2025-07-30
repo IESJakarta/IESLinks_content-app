@@ -47,7 +47,7 @@ import { useFetch } from '#app'; // Nuxt composable for data fetching
 const { data, pending, error } = await useFetch('/api/metricsKVIPdata'); //
 const totals = {},
 
-cont k = Object.keys(data.IPdata.servicedata)
+const k = Object.keys(data.IPdata.servicedata)
 
 let kidscount = 0
 for ( i in k) {
