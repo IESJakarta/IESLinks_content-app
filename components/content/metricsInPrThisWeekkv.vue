@@ -22,7 +22,7 @@
           </tbody>
         </table>
       </div>
-    </div>
+      </div>
     <div>
       <h1>{{ totals }}</h1>
 
