@@ -13,9 +13,9 @@ layout: text-page
 ---
 <br>
 
-## metricsIPTotalskv >>
+## metricsInPrTotalsThisWeek >>
 
-::metricsIPTotalskv
+::metricsInPrTotalsThisWeek
 ::
 
 <br>
