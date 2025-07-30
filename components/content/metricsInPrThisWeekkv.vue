@@ -36,7 +36,7 @@
       </span>
         <table style="margin: 0 auto; text-align: left;">
             <tbody>
-                <tr v-for="(value, key) in totals" :style="key === 'Total Attendance' ? 'border-top: 3px double #333; padding-top: 0.5em;' : ''"  style="text-align: right; line-height: 1.2em;">
+                <tr v-for="(value, key) in totals"  :style="key === 'Total Attendance' ? 'border-top: 3px double #cccccc; padding-top: 0.5em;' : ''" style="text-align: right; line-height: 1.2em;">
                     <td style="padding-right: 1em;">{{ key }}:</td>
                     <td>{{ value }}</td>
                 </tr>
