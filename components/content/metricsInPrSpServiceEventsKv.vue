@@ -6,7 +6,8 @@ You can switch between the two branches.
 <script setup>
 import { useFetch } from '#app'; // Nuxt composable for data fetching
 const { data, pending, error } = await useFetch('/api/metricsKVIPdata'); //
-var sEvents = Object.keys(data.value)
+var sEvents = Object.keys(data.SpServdata)
+
 
 let kidscount = accumulator("Kids") || 0
 let adults = accumulator("Adults") || 0
