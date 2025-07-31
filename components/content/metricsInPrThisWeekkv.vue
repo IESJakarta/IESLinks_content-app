@@ -29,6 +29,9 @@
           </table>
         </li>
       </ul>
+      
+      <hr>
+      <br>
 
       <!-- Display the calculated totals -->
       <div><span style="text-align: center; display: block;">
