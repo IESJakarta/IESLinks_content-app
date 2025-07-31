@@ -69,7 +69,7 @@ let totalAtt = (Object.values(tots).reduce((a, b) => a + b, 0))
       <!-- 
       - Special Event(s)
       -->
-      <div v-for="(value, key) in count">
+      <div v-for="(value, key) in data.SpServdata">
 
         <span style="text-align: center">
           <h3 style="margin-bottom: .2em;">{{ value.SServiceEvent }}</h3>
