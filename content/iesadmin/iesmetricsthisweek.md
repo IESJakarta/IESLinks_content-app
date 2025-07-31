@@ -14,6 +14,17 @@ layout: text-page
 
 <br>
 
+## test of metricsInPrSpSerKVfromGemini
+
+::metricsInPrSpSerKVfromGemini
+::
+
+<br>
+
+---
+
+<br>
+
 ## test of metricsInPrSpServiceEventsKv
 
 ::metricsInPrSpServiceEventsKv
