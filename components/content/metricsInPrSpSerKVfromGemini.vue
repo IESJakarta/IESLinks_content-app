@@ -8,11 +8,11 @@
     <p v-else-if="error">Error: {{ error.message }}</p>
 
     <!-- Display the data once it has been successfully fetched -->
-    <div v-else-if="data">
+    <div v-else-if="data.SpServdata">
       <h2 style="text-align: center; margin-bottom: 2rem;">Special Service Attendance</h2>
 
       <!-- Outer loop for each service event (e.g., "SService 0") -->
-      <div v-for="(serviceDetails, serviceKey) in data" :key="serviceKey" style="border: 1px solid #ddd; border-radius: 8px; padding: 1em; margin-bottom: 1.5em;">
+      <div v-for="(serviceDetails, serviceKey) in data.SpServdata" :key="serviceKey" style="border: 1px solid #ddd; border-radius: 8px; padding: 1em; margin-bottom: 1.5em;">
         <h3 style="margin-top: 0;">{{ serviceDetails.SServiceEvent }}</h3>
         <p><strong>Date:</strong> {{ serviceDetails.SServiceDate }}</p>
 
@@ -59,7 +59,7 @@ const { data, pending, error } = await useFetch('/api/metricsKVSpServdata');
 // A computed property to dynamically calculate totals from the fetched data.
 const totals = computed(() => {
   // Return a default object if data is not yet loaded.
-  if (!data.value) {
+  if (!data.SpServdata.value) {
     return {};
   }
 
@@ -67,8 +67,8 @@ const totals = computed(() => {
   let grandTotal = 0;
 
   // Iterate over each service (e.g., "SService 0", "SService 1")
-  for (const serviceKey in data.value) {
-    const service = data.value[serviceKey];
+  for (const serviceKey in data.SpServdata.value) {
+    const service = data.SpServdata.value[serviceKey];
     if (service && service.SServiceData) {
       // Iterate over each time slot within the service (e.g., "time 0")
       for (const timeKey in service.SServiceData) {
