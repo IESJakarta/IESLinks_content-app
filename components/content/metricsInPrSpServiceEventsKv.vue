@@ -5,7 +5,7 @@ You can switch between the two branches.
 
 <script setup>
 import { useFetch } from '#app'; // Nuxt composable for data fetching
-const { data, pending, error } = await useFetch('/api/metricsKVIPdata'); //
+const { data, pending, error } = await useFetch('/api/metricsKVSpServdata'); //
 var sEvents = Object.keys(data.SpServdata.value)
 
 
