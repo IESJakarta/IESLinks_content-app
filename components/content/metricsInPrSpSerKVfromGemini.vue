@@ -12,8 +12,8 @@
       <h2 style="text-align: center; margin-bottom: 2rem;">Special Service Attendance</h2>
 
       <!-- Check if there is a "No Special Service" event -->
-      <div v-if="data['SService 0'] && data['SService 0'].SServiceEvent.includes('No Special Service')">
-        <p style="text-align: center; font-style: italic; color: #555;">{{ data['SService 0'].SServiceEvent }}</p>
+      <div v-if="data.SpServdata['SService 0'] && data.SpServdata['SService 0'].SServiceEvent.includes('No Special Service')">
+        <p style="text-align: center; font-style: italic; color: #555;">{{ data.SpServdata['SService 0'].SServiceEvent }}</p>
       </div>
 
       <!-- Otherwise, display the event data and totals -->
@@ -45,7 +45,7 @@
           <h3 style="text-align: center;">Totals Summary</h3>
           <table style="margin: 0 auto; text-align: left; border-collapse: collapse; min-width: 250px;">
               <tbody>
-                  <tr v-for="(value, key) in totals" :key="key" :style="key === 'Grand Total' ? 'border-top: 3px double #000; padding-top: 0.5em; font-weight: bold;' : ''">
+                  <tr v-for="(value, key) in totals" :key="key" :style="key === 'Grand Total' ? 'border-top: 3px double #ffffff; padding-top: 0.5em; font-weight: bold;' : ''">
                       <td style="padding-right: 2em;">{{ key }}:</td>
                       <td style="text-align: right;">{{ value }}</td>
                   </tr>
@@ -67,7 +67,7 @@ const { data, pending, error } = await useFetch('/api/metricsKVSpServdata');
 // A computed property to dynamically calculate totals from the fetched data.
 const totals = computed(() => {
   // Return a default object if data is not yet loaded.
-  if (!data.value) {
+  if (!data.SpServdata.value) {
     return {};
   }
 
@@ -75,8 +75,8 @@ const totals = computed(() => {
   let grandTotal = 0;
 
   // Iterate over each service (e.g., "SService 0", "SService 1")
-  for (const serviceKey in data.value) {
-    const service = data.value[serviceKey];
+  for (const serviceKey in data.SpServdata.value) {
+    const service = data.SpServdata.value[serviceKey];
     if (service && service.SServiceData) {
       // Iterate over each time slot within the service (e.g., "time 0")
       for (const timeKey in service.SServiceData) {
