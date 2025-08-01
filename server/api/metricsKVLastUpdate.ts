@@ -21,7 +21,7 @@ export default defineEventHandler(async (event) => {
     const myValue = await MY_KV.get("LastUpdate"); //
 
     if (myValue) {
-      return (JSON.parse(myValue)); // Return the data
+      return (myValue); // Return the data
     } else {
       throw createError({ statusCode: 404, message: "Data not found" });
     }
