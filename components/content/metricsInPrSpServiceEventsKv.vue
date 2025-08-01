@@ -25,8 +25,8 @@
 
           <!-- Inner loop for each time slot (e.g., "time 0") -->
           <div v-for="(timeDetails, timeKey) in serviceDetails.SServiceData" :key="timeKey" style="margin-left: 1.5em; margin-top: 1em;">
-            <h4>Service Time ({{ timeDetails.time }})</h4>
-            <table style="margin-left: 1em; text-align: left;">
+            <h4 style="margin-bottom: 0;">Service Time ({{ timeDetails.time }})</h4>
+            <table style="margin-top: 0; margin-left: 1em; text-align: left;">
               <tbody>
                 <!-- Loop through attendance categories (Adult, Kid, etc.) -->
                 <tr v-for="(count, category) in timeDetails" :key="category">
