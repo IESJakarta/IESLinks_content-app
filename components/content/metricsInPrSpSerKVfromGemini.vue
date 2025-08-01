@@ -8,7 +8,7 @@
     <p v-else-if="error">Error: {{ error.message }}</p>
 
     <!-- Display the data once it has been successfully fetched -->
-    <div v-else-if="data">
+    <div v-else-if="data.SpServdata">
       <h2 style="text-align: center; margin-bottom: 2rem;">Special Service Attendance</h2>
 
       <!-- Check if there is a "No Special Service" event -->
