@@ -40,6 +40,10 @@ layout: text-page
 <br>
 <br>
 
+::metricsKVLastUpdate
+::
+
+
 ::refreshbutton
 ::
 
