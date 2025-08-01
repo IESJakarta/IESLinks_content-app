@@ -1,4 +1,5 @@
 <!-- components/MyComponent.vue -->
+
 <template>
   <div class="topgrid" style="text-align: left">
     <!-- Show a loading message while data is being fetched -->
@@ -8,7 +9,8 @@
     <p v-else-if="error">Error: {{ error.message }}</p>
 
     <!-- Display the data once it has been successfully fetched -->
-    <div v-if="data && data.LastUpdate"><p>Showing data last updated: {{ data }}</p></div>
+    <div v-if="data"><p>Showing data last updated: {{ data.LastUpdate }}</p>
+    </div>
   </div>
 </template>
 
