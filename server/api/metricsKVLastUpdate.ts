@@ -18,10 +18,10 @@ export default defineEventHandler(async (event) => {
     const MY_KV = cloudflare.env.metricskv; // Access your KV namespace
 
     // Example: Get a value from KV
-    const myValue = await MY_KV.get("SpServdata"); //
+    const myValue = await MY_KV.get("LastUpdate"); //
 
     if (myValue) {
-      return(JSON.parse(myValue)); // Return the data
+      return { LastUpdate: JSON.parse(myValue) }; // Return the data
     } else {
       throw createError({ statusCode: 404, message: "Data not found" });
     }

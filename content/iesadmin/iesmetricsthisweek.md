@@ -34,6 +34,16 @@ layout: text-page
 
 <br>
 
+::metricsInPrSpServiceEventsKv
+::
+
+<br>
+<br>
+
+::metricsKVLastUpdate
+::
+
+
 ::refreshbutton
 ::
 
