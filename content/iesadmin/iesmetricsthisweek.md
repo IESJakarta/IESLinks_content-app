@@ -14,17 +14,6 @@ layout: text-page
 
 <br>
 
-## test of metricsInPrSpServiceEventsKv
-
-::metricsInPrSpServiceEventsKv
-::
-
-<br>
-
----
-
-<br>
-
 ::metricsInPrThisWeekkv
 ::
 
@@ -43,6 +32,12 @@ layout: text-page
 
 ---
 
+<br>
+
+::metricsInPrSpServiceEventsKv
+::
+
+<br>
 <br>
 
 ::refreshbutton
