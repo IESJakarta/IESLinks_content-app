@@ -20,8 +20,8 @@
       <div v-else>
         <!-- Outer loop for each service event (e.g., "SService 0") -->
         <div v-for="(serviceDetails, serviceKey) in data" :key="serviceKey" style="border: 1px solid #ddd; border-radius: 8px; padding: 1em; margin-bottom: 1.5em; text-align: center;">
-          <h3 style="margin-top: 0"; margin-bottom: .2em;">{{ serviceDetails.SServiceEvent }}</h3>
-          <p  style="margin-bottom: 0";>{{ serviceDetails.SServiceDate }}</p>
+          <h3 style="margin-top: 0; margin-bottom: .2em;">{{ serviceDetails.SServiceEvent }}</h3>
+          <p  style="margin-bottom: 0;">{{ serviceDetails.SServiceDate }}</p>
 
           <!-- Inner loop for each time slot (e.g., "time 0") -->
           <div v-for="(timeDetails, timeKey) in serviceDetails.SServiceData" :key="timeKey" style="margin-left: 1.5em; margin-top: 1em;">
