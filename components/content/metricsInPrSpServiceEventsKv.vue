@@ -1,121 +1,105 @@
-<!--
-This example fetches latest Vue.js commits data from GitHub’s API and displays them as a list.
-You can switch between the two branches.
--->
-
-<script setup>
-import { useFetch } from '#app'; // Nuxt composable for data fetching
-const { data, pending, error } = await useFetch('/api/metricsKVSpServdata'); //
-var sEvents = Object.keys(data.SpServdata.value)
-
-
-let kidscount = accumulator("Kids") || 0
-let adults = accumulator("Adults") || 0
-let teens = accumulator("Teens") || 0
-let totalAttendance = (kidscount + adults + teens)
-let totals = {}
-totals.Kids = kidscount
-totals.Adults = adults
-totals.Teens = teens
-totals["Total Attendance"] = totalAttendance
-
-function accumulator(min) {
-  let accumulated = 0
-  for (var i in sEvents) {
-    let sData = Object.keys(data.SpServdata.value[sEvents[i]]["SServiceData"])
-    for (var x in sData) {
-      accumulated += data.SpServdata.value[sEvents[i]]["SServiceData"][sData[x]][min]
-      if (sData[x].split(' ')[0] === min) {
-        accumulated += data.SpServdata.value[sEvents[i]]["SServiceData"][sData[x]][min]
-      }
-    }
-  }
-  return (accumulated)
-}
-
-let tots = {}
-
-for (var i in sEvents) {
-  let sdata = Object.keys(data.SpServdata.value[sEvents[i]]["SServiceData"])
-  for (var x in sdata) {
-    let sdatakeys = Object.keys(data.SpServdata.value[sEvents[i]]["SServiceData"][sdata[x]])
-    for (var k in sdatakeys) {
-      let val = data.SpServdata.value[sEvents[i]]["SServiceData"][sdata[x]][sdatakeys[k]]
-      if (typeof val === 'number') {
-        tots[sdatakeys[k]] = val
-      }
-    }
-  }
-}
-
-let totalAtt = (Object.values(tots).reduce((a, b) => a + b, 0))
-
-</script>
-
+<!-- components/SpecialServiceAttendance.vue -->
 <template>
-  <div v-show="sEvents.length > 0">
-    <hr>
+  <div class="topgrid" style="text-align: left; font-family: sans-serif; max-width: 600px; margin: 2rem auto; padding: 1rem;">
+    <!-- Show a loading message while data is being fetched -->
+    <p v-if="pending">Loading Special Service Data...</p>
 
-    <div class=topgrid style="text-align: left; margin-top: 3em; margin-bottom: 3em;">
+    <!-- Show an error message if the fetch fails -->
+    <p v-else-if="error">Error: {{ error.message }}</p>
 
+    <!-- Display the data once it has been successfully fetched -->
+    <div v-else-if="data">
+      <h2 style="text-align: center; margin-bottom: 2rem;">Special Service Attendance</h2>
 
-      <p></p>
-      <!-- title section -->
-      <span style="text-align: center">
-        <h2>Recent Special Services</h2>
-      </span>
-      <!-- 
-      - Special Event(s)
-      -->
-      <div v-for="(value, key) in data.SpServdata">
+      <!-- Check if there is a "No Special Service" event -->
+      <div v-if="data['SService 0'] && data['SService 0'].SServiceEvent.includes('No Special Service')">
+        <p style="text-align: center; font-style: italic; color: #555;">{{ data['SService 0'].SServiceEvent }}</p>
+      </div>
 
-        <span style="text-align: center">
-          <h3 style="margin-bottom: .2em;">{{ value.SServiceEvent }}</h3>
-          <h3 style="margin-bottom: 0;">{{ value.SServiceDate }}</h3>
-        </span>
-        <p></p>
-        <p></p>
-        <!-- Listing Per Service attendance listing by ministry  -->
-        <div>
-          <ul>
+      <!-- Otherwise, display the event data and totals -->
+      <div v-else>
+        <!-- Outer loop for each service event (e.g., "SService 0") -->
+        <div v-for="(serviceDetails, serviceKey) in data" :key="serviceKey" style="border: 1px solid #ddd; border-radius: 8px; padding: 1em; margin-bottom: 1.5em; text-align: center;">
+          <h3 style="margin-top: 0;">{{ serviceDetails.SServiceEvent }}</h3>
+          <p>{{ serviceDetails.SServiceDate }}</p>
 
-            <li v-for="(value, key, index) in value.SServiceData"
-              style="line-height: 2em; margin-left: 1.3em; margin-bottom: 1.5em;">
-              <table style=" margin: 0px auto;">
-                Service {{ index + 1 }} @ {{ value.time }}
-                <tr v-for="(x, key, index) in tots" v-show="key != 'time'"
-                  style="text-align: right; line-height: 1.2em;">
-                  <td style="text-align: right;">{{ key }}:</td>
-                  <td style="text-align: right; padding-left: 1em;">{{ x }}</td>
+          <!-- Inner loop for each time slot (e.g., "time 0") -->
+          <div v-for="(timeDetails, timeKey) in serviceDetails.SServiceData" :key="timeKey" style="margin-left: 1.5em; margin-top: 1em;">
+            <h4>Service Time ({{ timeDetails.time }})</h4>
+            <table style="margin-left: 1em; text-align: left;">
+              <tbody>
+                <!-- Loop through attendance categories (Adult, Kid, etc.) -->
+                <tr v-for="(count, category) in timeDetails" :key="category">
+                  <template v-if="category !== 'time'">
+                    <td style="padding-right: 1em;">{{ category }}:</td>
+                    <td>{{ count }}</td>
+                  </template>
                 </tr>
-              </table>
-            </li>
-          </ul>
-
+              </tbody>
+            </table>
+          </div>
         </div>
-        <!--  Totals of attendance by ministry and total attendance. -->
-        <div>
-          <p></p>
-          <table style=" margin: 0px auto;">
-            <tr style="text-align: right; line-height: 1.2em;">
-              <td style="text-align: right;">
-                <h3 style="margin-bottom: .2em;">Total Attendance:</h3>
-              </td>
-              <td style="text-align: right; padding-left: 1em;">
-                {{ totalAtt }}
-              </td>
-            </tr>
-          </table>
 
+        <!-- Display the calculated totals -->
+        <div style="margin-top: 3rem;">
+          <h3 style="text-align: center;">Totals Summary</h3>
+          <table style="margin: 0 auto; text-align: left; border-collapse: collapse; min-width: 250px;">
+              <tbody>
+                  <tr v-for="(value, key) in totals" :key="key" :style="key === 'Grand Total' ? 'border-top: 3px double #ffffff; padding-top: 0.5em; font-weight: bold;' : ''">
+                      <td style="padding-right: 2em;">{{ key }}:</td>
+                      <td style="text-align: right;">{{ value }}</td>
+                  </tr>
+              </tbody>
+          </table>
         </div>
       </div>
     </div>
   </div>
 </template>
 
-<style scoped>
-li {
-  line-height: .9em;
-  margin-bottom: 20px;
-}
-</style>
+<script setup>
+import { computed } from 'vue';
+import { useFetch } from '#app';
+
+// Fetch data from the new API endpoint
+const { data, pending, error } = await useFetch('/api/metricsKVSpServdata');
+
+// A computed property to dynamically calculate totals from the fetched data.
+const totals = computed(() => {
+  // Return a default object if data is not yet loaded.
+  if (!data.value) {
+    return {};
+  }
+
+  const categoryTotals = {};
+  let grandTotal = 0;
+
+  // Iterate over each service (e.g., "SService 0", "SService 1")
+  for (const serviceKey in data.value) {
+    const service = data.value[serviceKey];
+    if (service && service.SServiceData) {
+      // Iterate over each time slot within the service (e.g., "time 0")
+      for (const timeKey in service.SServiceData) {
+        const timeSlot = service.SServiceData[timeKey];
+        // Iterate over each category within the time slot (e.g., "Adult", "Kid")
+        for (const category in timeSlot) {
+          // We only want to sum up attendance numbers, not the 'time' field.
+          if (category !== 'time') {
+            const count = Number(timeSlot[category]) || 0;
+            // Add to the specific category's total. Initialize if it doesn't exist.
+            categoryTotals[category] = (categoryTotals[category] || 0) + count;
+          }
+        }
+      }
+    }
+  }
+  
+  // Calculate the grand total by summing up all the category totals
+  grandTotal = Object.values(categoryTotals).reduce((sum, current) => sum + current, 0);
+  
+  // Add the grand total to the object that will be returned
+  categoryTotals['Grand Total'] = grandTotal;
+
+  return categoryTotals;
+});
+</script>
